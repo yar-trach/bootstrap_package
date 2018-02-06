@@ -67,8 +67,12 @@ page {
     }
 
     theme {
-        # cat=bootstrap package: basic/160/100; type=options[Default=default, Default Transition=default-transition, Inverse=inverse, Inverse Transition=inverse-transition]; label=Navigation Style
-        navigationstyle = default
+        # cat=bootstrap package: basic/160/99; type=options[Primary=primary, Secondary=secondary, Light=light, Dark=dark]; label=Navigation background
+        navigationbackground = light
+
+        # cat=bootstrap package: basic/160/100; type=options[Light=light, Dark=dark]; label=Navigation Style
+        navigationstyle = light
+
         # cat=bootstrap package: basic/160/101; type=options[Default=, Fixed Top=top, Fixed Bottom=bottom]; label=Navigation Type
         navigationtype =
         navigationicon {
@@ -365,4 +369,4 @@ plugin.bootstrap_package_contentelements {
 ###################
 #### FRAMEWORK ####
 ###################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/Bootstrap3/constants.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/Bootstrap4/constants.typoscript">

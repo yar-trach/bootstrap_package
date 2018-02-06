@@ -67,7 +67,7 @@
 ###################
 #### FRAMEWORK ####
 ###################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/Bootstrap3/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/Bootstrap4/setup.typoscript">
 
 
 ###################################
@@ -251,6 +251,7 @@ page {
             }
             navigation {
                 style = {$page.theme.navigationstyle}
+                background = {$page.theme.navigationbackground}
                 type = {$page.theme.navigationtype}
                 icon {
                     width = {$page.theme.navigationicon.width}

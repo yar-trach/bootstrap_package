@@ -62,3 +62,28 @@
         top: 6px;
     }
 }
+
+
+.navbar {
+    &.navbar-light {
+        .navbar-brand {
+            > .navbar-brand-logo-normal {
+                display: block;
+            }
+            > .navbar-brand-logo-inverted {
+                display: none;
+            }
+        }
+    }
+    &.navbar-dark {
+        .navbar-brand {
+            > .navbar-brand-logo-normal {
+                display: none;
+            }
+            > .navbar-brand-logo-inverted {
+                display: block;
+            }
+        }
+    }
+}
+
