@@ -10,6 +10,7 @@
 # customsubcategory=305=Paragraphs
 # customsubcategory=306=Grid breakpoints
 # customsubcategory=307=Components
+# customsubcategory=308=Fonts
 
 plugin.bootstrap_package {
     settings {
@@ -207,6 +208,50 @@ plugin.bootstrap_package {
             transition-fade = opacity .15s linear
             # cat=bootstrap 4.0.0: styling/307/transition-collapse; type=string; label=$transition-collapse:
             transition-collapse = height .35s ease
+
+
+            ###
+            ### Fonts
+            ###
+
+            # cat=bootstrap 4.0.0: styling/308/font-family-sans-serif; type=string; label=$font-family-sans-serif:
+            font-family-sans-serif = -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+            # cat=bootstrap 4.0.0: styling/308/font-family-monospace; type=string; label=$font-family-monospace:
+            font-family-monospace = SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+            # cat=bootstrap 4.0.0: styling/308/font-family-base; type=string; label=$font-family-base:
+            font-family-base = $font-family-sans-serif
+
+            # cat=bootstrap 4.0.0: styling/308/font-size-base; type=string; label=$font-size-base:
+            font-size-base = 1rem
+            # cat=bootstrap 4.0.0: styling/308/font-size-lg; type=string; label=$font-size-lg:
+            font-size-lg = ($font-size-base * 1.25)
+            # cat=bootstrap 4.0.0: styling/308/font-size-sm; type=string; label=$font-size-sm:
+            font-size-sm = ($font-size-base * .875)
+
+            # cat=bootstrap 4.0.0: styling/308/font-weight-light; type=string; label=$font-weight-light:
+            font-weight-light = 300
+            # cat=bootstrap 4.0.0: styling/308/font-weight-normal; type=string; label=$font-weight-normal:
+            font-weight-normal = 400
+            # cat=bootstrap 4.0.0: styling/308/font-weight-bold; type=string; label=$font-weight-bold:
+            font-weight-bold = 700
+
+            # cat=bootstrap 4.0.0: styling/308/font-weight-base; type=string; label=$font-weight-base:
+            font-weight-base = $font-weight-normal
+            # cat=bootstrap 4.0.0: styling/308/font-height-base; type=string; label=$font-height-base:
+            font-height-base = 1.5
+
+            # cat=bootstrap 4.0.0: styling/308/h1-font-size; type=string; label=$h1-font-size:
+            h1-font-size = $font-size-base * 2.5
+            # cat=bootstrap 4.0.0: styling/308/h2-font-size; type=string; label=$h2-font-size:
+            h2-font-size = $font-size-base * 2
+            # cat=bootstrap 4.0.0: styling/308/h3-font-size; type=string; label=$h3-font-size:
+            h3-font-size = $font-size-base * 1.75
+            # cat=bootstrap 4.0.0: styling/308/h4-font-size; type=string; label=$h4-font-size:
+            h4-font-size = $font-size-base * 1.5
+            # cat=bootstrap 4.0.0: styling/308/h5-font-size; type=string; label=$h5-font-size:
+            h5-font-size = $font-size-base * 1.25
+            # cat=bootstrap 4.0.0: styling/308/h6-font-size; type=string; label=$h6-font-size:
+            h6-font-size = $font-size-base
 
 
         }
