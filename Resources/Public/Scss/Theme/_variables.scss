@@ -1,0 +1,14 @@
+$grid-breakpoints: (
+    xs: $grid-breakpoints-xs,
+    sm: $grid-breakpoints-sm,
+    md: $grid-breakpoints-md,
+    lg: $grid-breakpoints-lg,
+    xl: $grid-breakpoints-xl
+);
+
+$container-max-widths: (
+    sm: $container-max-widths-sm,
+    md: $container-max-widths-md,
+    lg: $container-max-widths-lg,
+    xl: $container-max-widths-xl
+);

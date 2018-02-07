@@ -7,6 +7,8 @@
 # customsubcategory=302=Spacing
 # customsubcategory=303=Body
 # customsubcategory=304=Links
+# customsubcategory=305=Paragraphs
+# customsubcategory=306=breakpoints
 
 plugin.bootstrap_package {
     settings {
@@ -129,6 +131,44 @@ plugin.bootstrap_package {
             link-hover-decoration = underline
 
 
+
+            ###
+            ### Paragraphs
+            ###
+
+            # cat=bootstrap 4.0.0: styling/305/paragraph-margin-bottom; type=string; label=$paragraph-margin-bottom:
+            paragraph-margin-bottom = 1rem
+
+
+
+            ###
+            ### Grid breakpoints
+            ###
+
+            # cat=bootstrap 4.0.0: styling/306/grid-breakpoints-xs; type=string; label=$grid-breakpoints-xs:
+            grid-breakpoints-xs = 0
+            # cat=bootstrap 4.0.0: styling/306/grid-breakpoints-sm; type=string; label=$grid-breakpoints-sm:
+            grid-breakpoints-sm = 576px
+            # cat=bootstrap 4.0.0: styling/306/grid-breakpoints-md; type=string; label=$grid-breakpoints-md:
+            grid-breakpoints-md = 768px
+            # cat=bootstrap 4.0.0: styling/306/grid-breakpoints-lg; type=string; label=$grid-breakpoints-lg:
+            grid-breakpoints-lg = 992px
+            # cat=bootstrap 4.0.0: styling/306/grid-breakpoints-xl; type=string; label=$grid-breakpoints-xl:
+            grid-breakpoints-xl = 1200px
+
+            # cat=bootstrap 4.0.0: styling/306/container-max-widths-sm; type=string; label=$container-max-widths-sm:
+            container-max-widths-sm = 540px
+            # cat=bootstrap 4.0.0: styling/306/container-max-widths-md; type=string; label=$container-max-widths-md:
+            container-max-widths-md = 720px
+            # cat=bootstrap 4.0.0: styling/306/container-max-widths-lg; type=string; label=$container-max-widths-lg:
+            container-max-widths-lg = 960px
+            # cat=bootstrap 4.0.0: styling/306/container-max-widths-xl; type=string; label=$container-max-widths-xl:
+            container-max-widths-xl = 1140px
+
+            # cat=bootstrap 4.0.0: styling/306/grid-columns; type=string; label=$grid-columns:
+            grid-columns = 12
+            # cat=bootstrap 4.0.0: styling/306/grid-gutter-width; type=string; label=$grid-gutter-width:
+            grid-gutter-width = 30px
 
         }
     }
