@@ -3,6 +3,11 @@
 #######################
 
 # customsubcategory=300=Colors
+# customsubcategory=301=Options
+# customsubcategory=302=Spacing
+# customsubcategory=303=Body
+# customsubcategory=304=Links
+
 plugin.bootstrap_package {
     settings {
         scss {
@@ -50,8 +55,6 @@ plugin.bootstrap_package {
             # cat=bootstrap 4.0.0: styling/300/cyan; type=string; label=$cyan:
             cyan = #17a2b8
 
-
-
             # cat=bootstrap 4.0.0: styling/300/primary; type=string; label=$primary:
             primary = #f49800
             # cat=bootstrap 4.0.0: styling/300/secondary; type=string; label=$secondary:
@@ -68,6 +71,64 @@ plugin.bootstrap_package {
             light = $gray-100
             # cat=bootstrap 4.0.0: styling/300/dark; type=string; label=$dark:
             dark = $gray-800
+
+
+
+            ###
+            ### OPTIONS
+            ###
+
+            # cat=bootstrap 4.0.0: styling/301/enable-caret; type=boolean; label=$enable-caret:
+            enable-caret = true
+            # cat=bootstrap 4.0.0: styling/301/enable-rounded; type=boolean; label=$enable-rounded:
+            enable-rounded = true
+            # cat=bootstrap 4.0.0: styling/301/enable-shadows; type=boolean; label=$enable-shadows:
+            enable-shadows = false
+            # cat=bootstrap 4.0.0: styling/301/enable-gradients; type=boolean; label=$enable-gradients:
+            enable-gradients = false
+            # cat=bootstrap 4.0.0: styling/301/enable-transitions; type=boolean; label=$enable-transitions:
+            enable-transitions = true
+            # cat=bootstrap 4.0.0: styling/301/enable-grid-classes; type=boolean; label=$enable-grid-classes:
+            enable-grid-classes = true
+            # cat=bootstrap 4.0.0: styling/301/enable-print-styles; type=boolean; label=$enable-print-styles:
+            enable-print-styles = true
+
+
+
+            ###
+            ### Spacing
+            ###
+
+            # cat=bootstrap 4.0.0: styling/302/spacer; type=string; label=$spacer:
+            spacer = 1rem
+
+
+
+            ###
+            ### Body
+            ###
+
+            # cat=bootstrap 4.0.0: styling/303/body-bg; type=string; label=$body-bg:
+            body-bg = $white
+            # cat=bootstrap 4.0.0: styling/303/body-color; type=string; label=$body-color:
+            body-color = $gray-900
+
+
+
+            ###
+            ### Links
+            ###
+
+            # cat=bootstrap 4.0.0: styling/304/link-color; type=string; label=$link-color:
+            link-color = theme-color("primary")
+            # cat=bootstrap 4.0.0: styling/304/link-decoration; type=string; label=$link-decoration:
+            link-decoration = none
+            # cat=bootstrap 4.0.0: styling/304/link-hover-color; type=string; label=$link-hover-color:
+            link-hover-color = darken($link-color, 15%)
+            # cat=bootstrap 4.0.0: styling/304/link-hover-decoration; type=string; label=$link-hover-decoration:
+            link-hover-decoration = underline
+
+
 
         }
     }
