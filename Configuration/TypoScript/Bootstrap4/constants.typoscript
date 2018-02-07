@@ -8,7 +8,8 @@
 # customsubcategory=303=Body
 # customsubcategory=304=Links
 # customsubcategory=305=Paragraphs
-# customsubcategory=306=breakpoints
+# customsubcategory=306=Grid breakpoints
+# customsubcategory=307=Components
 
 plugin.bootstrap_package {
     settings {
@@ -169,6 +170,44 @@ plugin.bootstrap_package {
             grid-columns = 12
             # cat=bootstrap 4.0.0: styling/306/grid-gutter-width; type=string; label=$grid-gutter-width:
             grid-gutter-width = 30px
+
+
+
+            ###
+            ### Components
+            ###
+
+            # cat=bootstrap 4.0.0: styling/307/line-height-lg; type=string; label=$line-height-lg:
+            line-height-lg = 1.5
+            # cat=bootstrap 4.0.0: styling/307/line-height-sm; type=string; label=$line-height-sm:
+            line-height-sm = 1.5
+
+            # cat=bootstrap 4.0.0: styling/307/border-width; type=string; label=$border-width:
+            border-width = 1px
+            # cat=bootstrap 4.0.0: styling/307/border-color; type=string; label=$border-color:
+            border-color = $gray-300
+            # cat=bootstrap 4.0.0: styling/307/border-radius; type=string; label=$border-radius:
+            border-radius = .25rem
+            # cat=bootstrap 4.0.0: styling/307/border-radius-lg; type=string; label=$border-radius-lg:
+            border-radius-lg = .3rem
+            # cat=bootstrap 4.0.0: styling/307/border-radius-sm; type=string; label=$border-radius-sm:
+            border-radius-sm = .2rem
+
+            # cat=bootstrap 4.0.0: styling/307/component-active-color; type=string; label=$component-active-color:
+            component-active-color = $white
+            # cat=bootstrap 4.0.0: styling/307/component-active-bg; type=string; label=$component-active-bg:
+            component-active-bg = theme-color("primary")
+
+            # cat=bootstrap 4.0.0: styling/307/caret-width; type=string; label=$caret-width:
+            caret-width = .3em
+
+            # cat=bootstrap 4.0.0: styling/307/transition-base; type=string; label=$transition-base:
+            transition-base = all .2s ease-in-out
+            # cat=bootstrap 4.0.0: styling/307/transition-fade; type=string; label=$transition-fade:
+            transition-fade = opacity .15s linear
+            # cat=bootstrap 4.0.0: styling/307/transition-collapse; type=string; label=$transition-collapse:
+            transition-collapse = height .35s ease
+
 
         }
     }
