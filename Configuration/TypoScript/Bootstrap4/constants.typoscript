@@ -31,6 +31,11 @@
 # customsubcategory=326=List group
 # customsubcategory=327=Image thumbnails
 # customsubcategory=328=Figures
+# customsubcategory=329=Breadcrumbs
+# customsubcategory=330=Carousel
+# customsubcategory=331=Close
+# customsubcategory=332=Code
+# customsubcategory=333=Printing
 
 
 plugin.bootstrap_package {
@@ -96,6 +101,17 @@ plugin.bootstrap_package {
             light = $gray-100
             # cat=bootstrap 4.0.0: styling/300/dark; type=string; label=$dark:
             dark = $gray-800
+
+            # cat=bootstrap 4.0.0: styling/300/theme-color-interval; type=string; label=$theme-color-interval:
+            theme-color-interval = 8%
+
+            # cat=bootstrap 4.0.0: styling/300/yiq-contrasted-threshold; type=string; label=$yiq-contrasted-threshold:
+            yiq-contrasted-threshold = 150
+
+            # cat=bootstrap 4.0.0: styling/300/yiq-text-dark; type=string; label=$yiq-text-dark:
+            yiq-text-dark = $gray-900
+            # cat=bootstrap 4.0.0: styling/300/yiq-text-light; type=string; label=$yiq-text-light:
+            yiq-text-light = $white
 
 
 
@@ -1202,7 +1218,6 @@ plugin.bootstrap_package {
 
 
 
-
             ###
             ### List group
             ###
@@ -1246,6 +1261,7 @@ plugin.bootstrap_package {
             list-group-action-active-bg = $gray-200
 
 
+
             ###
             ### Image thumbnails
             ###
@@ -1264,6 +1280,7 @@ plugin.bootstrap_package {
             thumbnail-box-shadow = 0 1px 2px rgba($black, .075)
 
 
+
             ###
             ### Figures
             ###
@@ -1272,6 +1289,122 @@ plugin.bootstrap_package {
             figure-caption-font-size = 90%
             # cat=bootstrap 4.0.0: styling/328/figure-caption-color; type=string; label=$figure-caption-color:
             figure-caption-color = $gray-600
+
+
+
+            ###
+            ### Breadcrumbs
+            ###
+
+            # cat=bootstrap 4.0.0: styling/329/breadcrumb-padding-y; type=string; label=$breadcrumb-padding-y:
+            breadcrumb-padding-y = .75rem
+            # cat=bootstrap 4.0.0: styling/329/breadcrumb-padding-x; type=string; label=$breadcrumb-padding-x:
+            breadcrumb-padding-x = 1rem
+            # cat=bootstrap 4.0.0: styling/329/breadcrumb-item-padding; type=string; label=$breadcrumb-item-padding:
+            breadcrumb-item-padding = .5rem
+
+            # cat=bootstrap 4.0.0: styling/329/breadcrumb-margin-bottom; type=string; label=$breadcrumb-margin-bottom:
+            breadcrumb-margin-bottom = 1rem
+
+            # cat=bootstrap 4.0.0: styling/329/breadcrumb-bg; type=string; label=$breadcrumb-bg:
+            breadcrumb-bg = $gray-200
+            # cat=bootstrap 4.0.0: styling/329/breadcrumb-divider-color; type=string; label=$breadcrumb-divider-color:
+            breadcrumb-divider-color = $gray-600
+            # cat=bootstrap 4.0.0: styling/329/breadcrumb-active-color; type=string; label=$breadcrumb-active-color:
+            breadcrumb-active-color = $gray-600
+            # cat=bootstrap 4.0.0: styling/329/breadcrumb-divider; type=string; label=$breadcrumb-divider:
+            breadcrumb-divider = "/"
+
+
+
+            ###
+            ### Carousel
+            ###
+
+            # cat=bootstrap 4.0.0: styling/330/carousel-control-color; type=string; label=$carousel-control-color:
+            carousel-control-color = $white
+            # cat=bootstrap 4.0.0: styling/330/carousel-control-width; type=string; label=$carousel-control-width:
+            carousel-control-width = 15%
+            # cat=bootstrap 4.0.0: styling/330/carousel-control-opacity; type=string; label=$carousel-control-opacity:
+            carousel-control-opacity = .5
+
+            # cat=bootstrap 4.0.0: styling/330/carousel-indicator-width; type=string; label=$carousel-indicator-width:
+            carousel-indicator-width = 30px
+            # cat=bootstrap 4.0.0: styling/330/carousel-indicator-height; type=string; label=$carousel-indicator-height:
+            carousel-indicator-height = 3px
+            # cat=bootstrap 4.0.0: styling/330/carousel-indicator-spacer; type=string; label=$carousel-indicator-spacer:
+            carousel-indicator-spacer = 3px
+            # cat=bootstrap 4.0.0: styling/330/carousel-indicator-active-bg; type=string; label=$carousel-indicator-active-bg:
+            carousel-indicator-active-bg = $white
+
+            # cat=bootstrap 4.0.0: styling/330/carousel-caption-width; type=string; label=$carousel-caption-width:
+            carousel-caption-width = 70%
+            # cat=bootstrap 4.0.0: styling/330/carousel-caption-color; type=string; label=$carousel-caption-color:
+            carousel-caption-color = $white
+
+            # cat=bootstrap 4.0.0: styling/330/carousel-control-icon-width; type=string; label=$carousel-control-icon-width:
+            carousel-control-icon-width = 20px
+
+            # cat=bootstrap 4.0.0: styling/330/carousel-control-prev-icon-bg; type=string; label=$carousel-control-prev-icon-bg:
+            carousel-control-prev-icon-bg = str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"), "#", "%23")
+            # cat=bootstrap 4.0.0: styling/330/carousel-control-next-icon-bg; type=string; label=$carousel-control-next-icon-bg:
+            carousel-control-next-icon-bg = str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"), "#", "%23")
+
+            # cat=bootstrap 4.0.0: styling/330/carousel-transition; type=string; label=$carousel-transition:
+            carousel-transition = transform .6s ease
+
+
+
+            ###
+            ### Close
+            ###
+
+            # cat=bootstrap 4.0.0: styling/331/close-font-size; type=string; label=$close-font-size:
+            close-font-size = $font-size-base * 1.5
+            # cat=bootstrap 4.0.0: styling/331/close-font-weight; type=string; label=$close-font-weight:
+            close-font-weight = $font-weight-bold
+            # cat=bootstrap 4.0.0: styling/331/close-color; type=string; label=$close-color:
+            close-color = $black
+            # cat=bootstrap 4.0.0: styling/331/close-text-shadow; type=string; label=$close-text-shadow:
+            close-text-shadow = 0 1px 0 $white
+
+
+
+            ###
+            ### Code
+            ###
+
+            # cat=bootstrap 4.0.0: styling/332/code-font-size; type=string; label=$code-font-size:
+            code-font-size = 87.5%
+            # cat=bootstrap 4.0.0: styling/332/code-color; type=string; label=$code-color:
+            code-color = $pink
+
+            # cat=bootstrap 4.0.0: styling/332/kbd-padding-y; type=string; label=$kbd-padding-y:
+            kbd-padding-y = .2rem
+            # cat=bootstrap 4.0.0: styling/332/kbd-padding-x; type=string; label=$kbd-padding-x:
+            kbd-padding-x = .4rem
+            # cat=bootstrap 4.0.0: styling/332/kbd-font-size; type=string; label=$kbd-font-size:
+            kbd-font-size = $code-font-size
+            # cat=bootstrap 4.0.0: styling/332/kbd-color; type=string; label=$kbd-color:
+            kbd-color = $white
+            # cat=bootstrap 4.0.0: styling/332/kbd-bg; type=string; label=$kbd-bg:
+            kbd-bg = $gray-900
+
+            # cat=bootstrap 4.0.0: styling/332/pre-color; type=string; label=$pre-color:
+            pre-color = $gray-900
+            # cat=bootstrap 4.0.0: styling/332/pre-scrollable-max-height; type=string; label=$pre-scrollable-max-height:
+            pre-scrollable-max-height = 340px
+
+
+
+            ###
+            ### Printing
+            ###
+
+            # cat=bootstrap 4.0.0: styling/333/print-page-size; type=string; label=$print-page-size:
+            print-page-size = a3
+            # cat=bootstrap 4.0.0: styling/333/print-body-min-width; type=string; label=$print-body-min-width:
+            print-body-min-width = map-get($grid-breakpoints, "lg")
         }
     }
 }
