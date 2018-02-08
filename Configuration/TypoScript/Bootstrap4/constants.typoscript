@@ -26,6 +26,11 @@
 # customsubcategory=321=Popovers
 # customsubcategory=322=Badges
 # customsubcategory=323=Modals
+# customsubcategory=324=Alerts
+# customsubcategory=325=Progress bars
+# customsubcategory=326=List group
+# customsubcategory=327=Image thumbnails
+# customsubcategory=328=Figures
 
 
 plugin.bootstrap_package {
@@ -1143,6 +1148,130 @@ plugin.bootstrap_package {
 
             # cat=bootstrap 4.0.0: styling/323/modal-transition; type=string; label=$modal-transition:
             modal-transition = transform .3s ease-out
+
+
+
+            ###
+            ### Alerts
+            ###
+
+            # cat=bootstrap 4.0.0: styling/324/alert-padding-y; type=string; label=$alert-padding-y:
+            alert-padding-y = .75rem
+            # cat=bootstrap 4.0.0: styling/324/alert-padding-x; type=string; label=$alert-padding-x:
+            alert-padding-x = 1.25rem
+            # cat=bootstrap 4.0.0: styling/324/alert-margin-bottom; type=string; label=$alert-margin-bottom:
+            alert-margin-bottom = 1rem
+            # cat=bootstrap 4.0.0: styling/324/alert-border-radius; type=string; label=$alert-border-radius:
+            alert-border-radius = $border-radius
+            # cat=bootstrap 4.0.0: styling/324/alert-link-font-weight; type=string; label=$alert-link-font-weight:
+            alert-link-font-weight = $font-weight-bold
+            # cat=bootstrap 4.0.0: styling/324/alert-border-width; type=string; label=$alert-border-width:
+            alert-border-width = $border-width
+
+            # cat=bootstrap 4.0.0: styling/324/alert-bg-level; type=string; label=$alert-bg-level:
+            alert-bg-level = -10
+            # cat=bootstrap 4.0.0: styling/324/alert-border-level; type=string; label=$alert-border-level:
+            alert-border-level = -9
+            # cat=bootstrap 4.0.0: styling/324/alert-color-level; type=string; label=$alert-color-level:
+            alert-color-level = 6
+
+
+
+            ###
+            ### Progress bars
+            ###
+
+            # cat=bootstrap 4.0.0: styling/325/progress-height; type=string; label=$progress-height:
+            progress-height = 1rem
+            # cat=bootstrap 4.0.0: styling/325/progress-font-size; type=string; label=$progress-font-size:
+            progress-font-size = ($font-size-base * .75)
+            # cat=bootstrap 4.0.0: styling/325/progress-bg; type=string; label=$progress-bg:
+            progress-bg = $gray-200
+            # cat=bootstrap 4.0.0: styling/325/progress-border-radius; type=string; label=$progress-border-radius:
+            progress-border-radius = $border-radius
+            # cat=bootstrap 4.0.0: styling/325/progress-box-shadow; type=string; label=$progress-box-shadow:
+            progress-box-shadow = inset 0 .1rem .1rem rgba($black, .1)
+            # cat=bootstrap 4.0.0: styling/325/progress-bar-color; type=string; label=$progress-bar-color:
+            progress-bar-color = $white
+            # cat=bootstrap 4.0.0: styling/325/progress-bar-bg; type=string; label=$progress-bar-bg:
+            progress-bar-bg = theme-color("primary")
+            # cat=bootstrap 4.0.0: styling/325/progress-bar-animation-timing; type=string; label=$progress-bar-animation-timing:
+            progress-bar-animation-timing = 1s linear infinite
+            # cat=bootstrap 4.0.0: styling/325/progress-bar-transition; type=string; label=$progress-bar-transition:
+            progress-bar-transition = width .6s ease
+
+
+
+
+            ###
+            ### List group
+            ###
+
+            # cat=bootstrap 4.0.0: styling/326/list-group-bg; type=string; label=$list-group-bg:
+            list-group-bg = $white
+            # cat=bootstrap 4.0.0: styling/326/list-group-border-color; type=string; label=$list-group-border-color:
+            list-group-border-color = rgba($black, .125)
+            # cat=bootstrap 4.0.0: styling/326/list-group-border-width; type=string; label=$list-group-border-width:
+            list-group-border-width = $border-width
+            # cat=bootstrap 4.0.0: styling/326/list-group-border-radius; type=string; label=$list-group-border-radius:
+            list-group-border-radius = $border-radius
+
+            # cat=bootstrap 4.0.0: styling/326/list-group-item-padding-y; type=string; label=$list-group-item-padding-y:
+            list-group-item-padding-y = .75rem
+            # cat=bootstrap 4.0.0: styling/326/list-group-item-padding-x; type=string; label=$list-group-item-padding-x:
+            list-group-item-padding-x = 1.25rem
+
+            # cat=bootstrap 4.0.0: styling/326/list-group-hover-bg; type=string; label=$list-group-hover-bg:
+            list-group-hover-bg = $gray-100
+            # cat=bootstrap 4.0.0: styling/326/list-group-active-color; type=string; label=$list-group-active-color:
+            list-group-active-color = $component-active-color
+            # cat=bootstrap 4.0.0: styling/326/list-group-active-bg; type=string; label=$list-group-active-bg:
+            list-group-active-bg = $component-active-bg
+            # cat=bootstrap 4.0.0: styling/326/list-group-active-border-color; type=string; label=$list-group-active-border-color:
+            list-group-active-border-color = $list-group-active-bg
+
+            # cat=bootstrap 4.0.0: styling/326/list-group-disabled-color; type=string; label=$list-group-disabled-color:
+            list-group-disabled-color = $gray-600
+            # cat=bootstrap 4.0.0: styling/326/list-group-disabled-bg; type=string; label=$list-group-disabled-bg:
+            list-group-disabled-bg = $list-group-bg
+
+            # cat=bootstrap 4.0.0: styling/326/list-group-action-color; type=string; label=$list-group-action-color:
+            list-group-action-color = $gray-700
+            # cat=bootstrap 4.0.0: styling/326/list-group-action-hover-color; type=string; label=$list-group-action-hover-color:
+            list-group-action-hover-color = $list-group-action-color
+
+            # cat=bootstrap 4.0.0: styling/326/list-group-action-active-color; type=string; label=$list-group-action-active-color:
+            list-group-action-active-color = $body-color
+            # cat=bootstrap 4.0.0: styling/326/list-group-action-active-bg; type=string; label=$list-group-action-active-bg:
+            list-group-action-active-bg = $gray-200
+
+
+            ###
+            ### Image thumbnails
+            ###
+
+            # cat=bootstrap 4.0.0: styling/327/thumbnail-padding; type=string; label=$thumbnail-padding:
+            thumbnail-padding = .25rem
+            # cat=bootstrap 4.0.0: styling/327/thumbnail-bg; type=string; label=$thumbnail-bg:
+            thumbnail-bg = $body-bg
+            # cat=bootstrap 4.0.0: styling/327/thumbnail-border-width; type=string; label=$thumbnail-border-width:
+            thumbnail-border-width = $border-width
+            # cat=bootstrap 4.0.0: styling/327/thumbnail-border-color; type=string; label=$thumbnail-border-color:
+            thumbnail-border-color = $gray-300
+            # cat=bootstrap 4.0.0: styling/327/thumbnail-border-radius; type=string; label=$thumbnail-border-radius:
+            thumbnail-border-radius = $border-radius
+            # cat=bootstrap 4.0.0: styling/327/thumbnail-box-shadow; type=string; label=$thumbnail-box-shadow:
+            thumbnail-box-shadow = 0 1px 2px rgba($black, .075)
+
+
+            ###
+            ### Figures
+            ###
+
+            # cat=bootstrap 4.0.0: styling/328/figure-caption-font-size; type=string; label=$figure-caption-font-size:
+            figure-caption-font-size = 90%
+            # cat=bootstrap 4.0.0: styling/328/figure-caption-color; type=string; label=$figure-caption-color:
+            figure-caption-color = $gray-600
         }
     }
 }
