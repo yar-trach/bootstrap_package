@@ -15,6 +15,8 @@
 # customsubcategory=310=Buttons + Forms
 # customsubcategory=311=Buttons
 # customsubcategory=312=Forms
+# customsubcategory=313=Dropdowns
+# customsubcategory=314=Z-index
 
 
 plugin.bootstrap_package {
@@ -474,9 +476,6 @@ plugin.bootstrap_package {
             ### Forms
             ###
 
-
-
-
             # cat=bootstrap 4.0.0: styling/312/input-padding-y-sm; type=string; label=$input-padding-y-sm:
             input-padding-y-sm = $input-btn-padding-y-sm
             # cat=bootstrap 4.0.0: styling/312/input-padding-x-sm; type=string; label=$input-padding-x-sm:
@@ -717,6 +716,74 @@ plugin.bootstrap_package {
             # cat=bootstrap 4.0.0: styling/312/form-feedback-invalid-color; type=string; label=$form-feedback-invalid-color:
             form-feedback-invalid-color = theme-color("danger")
 
+
+
+            ###
+            ### Dropdowns
+            ###
+
+            # cat=bootstrap 4.0.0: styling/313/dropdown-min-width; type=string; label=$dropdown-min-width:
+            dropdown-min-width = 10rem
+            # cat=bootstrap 4.0.0: styling/313/dropdown-padding-y; type=string; label=$dropdown-padding-y:
+            dropdown-padding-y = .5rem
+            # cat=bootstrap 4.0.0: styling/313/dropdown-spacer; type=string; label=$dropdown-spacer:
+            dropdown-spacer = .125rem
+            # cat=bootstrap 4.0.0: styling/313/dropdown-bg; type=string; label=$dropdown-bg:
+            dropdown-bg = $white
+            # cat=bootstrap 4.0.0: styling/313/dropdown-border-color; type=string; label=$dropdown-border-color:
+            dropdown-border-color = rgba($black, .15)
+            # cat=bootstrap 4.0.0: styling/313/dropdown-border-radius; type=string; label=$dropdown-border-radius:
+            dropdown-border-radius = $border-radius
+            # cat=bootstrap 4.0.0: styling/313/dropdown-border-width; type=string; label=$dropdown-border-width:
+            dropdown-border-width = $border-width
+            # cat=bootstrap 4.0.0: styling/313/dropdown-divider-bg; type=string; label=$dropdown-divider-bg:
+            dropdown-divider-bg = $gray-200
+            # cat=bootstrap 4.0.0: styling/313/dropdown-box-shadow; type=string; label=$dropdown-box-shadow:
+            dropdown-box-shadow = 0 .5rem 1rem rgba($black, .175)
+
+            # cat=bootstrap 4.0.0: styling/313/dropdown-link-color; type=string; label=$dropdown-link-color:
+            dropdown-link-color = $gray-900
+            # cat=bootstrap 4.0.0: styling/313/dropdown-link-hover-color; type=string; label=$dropdown-link-hover-color:
+            dropdown-link-hover-color = darken($gray-900, 5%)
+            # cat=bootstrap 4.0.0: styling/313/dropdown-link-hover-bg; type=string; label=$dropdown-link-hover-bg:
+            dropdown-link-hover-bg = $gray-100
+
+            # cat=bootstrap 4.0.0: styling/313/dropdown-link-active-color; type=string; label=$dropdown-link-active-color:
+            dropdown-link-active-color = $component-active-color
+            # cat=bootstrap 4.0.0: styling/313/dropdown-link-active-bg; type=string; label=$dropdown-link-active-bg:
+            dropdown-link-active-bg = $component-active-bg
+
+            # cat=bootstrap 4.0.0: styling/313/dropdown-link-disabled-color; type=string; label=$dropdown-link-disabled-color:
+            dropdown-link-disabled-color = $gray-600
+
+            # cat=bootstrap 4.0.0: styling/313/dropdown-item-padding-y; type=string; label=$dropdown-item-padding-y:
+            dropdown-item-padding-y = .25rem
+            # cat=bootstrap 4.0.0: styling/313/dropdown-item-padding-x; type=string; label=$dropdown-item-padding-x:
+            dropdown-item-padding-x = 1.5rem
+
+            # cat=bootstrap 4.0.0: styling/313/dropdown-header-color; type=string; label=$dropdown-header-color:
+            dropdown-header-color = $gray-600
+
+
+
+            ###
+            ### Z-index
+            ###
+
+            # cat=bootstrap 4.0.0: styling/314/zindex-dropdown; type=string; label=$zindex-dropdown:
+            zindex-dropdown = 1000
+            # cat=bootstrap 4.0.0: styling/314/zindex-sticky; type=string; label=$zindex-sticky:
+            zindex-sticky = 1020
+            # cat=bootstrap 4.0.0: styling/314/zindex-fixed; type=string; label=$zindex-fixed:
+            zindex-fixed = 1030
+            # cat=bootstrap 4.0.0: styling/314/zindex-modal-backdrop; type=string; label=$zindex-modal-backdrop:
+            zindex-modal-backdrop = 1040
+            # cat=bootstrap 4.0.0: styling/314/zindex-modal; type=string; label=$zindex-modal:
+            zindex-modal = 1050
+            # cat=bootstrap 4.0.0: styling/314/zindex-popover; type=string; label=$zindex-popover:
+            zindex-popover = 1060
+            # cat=bootstrap 4.0.0: styling/314/zindex-tooltip; type=string; label=$zindex-tooltip:
+            zindex-tooltip = 1070
         }
     }
 }
