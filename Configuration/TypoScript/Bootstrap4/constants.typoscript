@@ -253,6 +253,39 @@ plugin.bootstrap_package {
             # cat=bootstrap 4.0.0: styling/308/h6-font-size; type=string; label=$h6-font-size:
             h6-font-size = $font-size-base
 
+            # cat=bootstrap 4.0.0: styling/308/headings-margin-bottom; type=string; label=$headings-margin-bottom:
+            headings-margin-bottom = ($spacer / 2)
+            # cat=bootstrap 4.0.0: styling/308/headings-font-family; type=string; label=$headings-font-family:
+            headings-font-family = inherit
+            # cat=bootstrap 4.0.0: styling/308/headings-font-weight; type=string; label=$headings-font-weight:
+            headings-font-weight = 500
+            # cat=bootstrap 4.0.0: styling/308/headings-line-height; type=string; label=$headings-line-height:
+            headings-line-height = 1.2
+            # cat=bootstrap 4.0.0: styling/308/headings-color; type=string; label=$headings-color:
+            headings-color = inherit
+
+            # cat=bootstrap 4.0.0: styling/308/display1-size; type=string; label=$display1-size:
+            display1-size = 6rem
+            # cat=bootstrap 4.0.0: styling/308/display2-size; type=string; label=$display2-size:
+            display2-size = 5.5rem
+            # cat=bootstrap 4.0.0: styling/308/display3-size; type=string; label=$display3-size:
+            display3-size = 4.5rem
+            # cat=bootstrap 4.0.0: styling/308/display4-size; type=string; label=$display4-size:
+            display4-size = 3.5rem
+
+            # cat=bootstrap 4.0.0: styling/308/display1-weight; type=string; label=$display1-weight:
+            display1-weight = 300
+            # cat=bootstrap 4.0.0: styling/308/display2-weight; type=string; label=$display2-weight:
+            display2-weight = 300
+            # cat=bootstrap 4.0.0: styling/308/display3-weight; type=string; label=$display3-weight:
+            display3-weight = 300
+            # cat=bootstrap 4.0.0: styling/308/display4-weight; type=string; label=$display4-weight:
+            display4-weight = 300
+
+            # cat=bootstrap 4.0.0: styling/308/display-line-height; type=string; label=$display-line-height:
+            display-line-height = $headings-line-height
+
+
 
         }
     }
