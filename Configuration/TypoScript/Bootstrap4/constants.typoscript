@@ -23,6 +23,9 @@
 # customsubcategory=318=Jumbotron
 # customsubcategory=319=Cards
 # customsubcategory=320=Tooltips
+# customsubcategory=321=Popovers
+# customsubcategory=322=Badges
+# customsubcategory=323=Modals
 
 
 plugin.bootstrap_package {
@@ -1021,6 +1024,125 @@ plugin.bootstrap_package {
 
 
 
+            ###
+            ### Popovers
+            ###
+
+            # cat=bootstrap 4.0.0: styling/321/popover-font-size; type=string; label=$popover-font-size:
+            popover-font-size = $font-size-sm
+            # cat=bootstrap 4.0.0: styling/321/popover-bg; type=string; label=$popover-bg:
+            popover-bg = $white
+            # cat=bootstrap 4.0.0: styling/321/popover-max-width; type=string; label=$popover-max-width:
+            popover-max-width = 276px
+            # cat=bootstrap 4.0.0: styling/321/popover-border-width; type=string; label=$popover-border-width:
+            popover-border-width = $border-width
+            # cat=bootstrap 4.0.0: styling/321/popover-border-color; type=string; label=$popover-border-color:
+            popover-border-color = rgba($black, .2)
+            # cat=bootstrap 4.0.0: styling/321/popover-border-radius; type=string; label=$popover-border-radius:
+            popover-border-radius = $border-radius-lg
+            # cat=bootstrap 4.0.0: styling/321/popover-box-shadow; type=string; label=$popover-box-shadow:
+            popover-box-shadow = 0 .25rem .5rem rgba($black, .2)
+
+            # cat=bootstrap 4.0.0: styling/321/popover-header-bg; type=string; label=$popover-header-bg:
+            popover-header-bg = darken($popover-bg, 3%)
+            # cat=bootstrap 4.0.0: styling/321/popover-header-color; type=string; label=$popover-header-color:
+            popover-header-color = $headings-color
+            # cat=bootstrap 4.0.0: styling/321/popover-header-padding-y; type=string; label=$popover-header-padding-y:
+            popover-header-padding-y = .5rem
+            # cat=bootstrap 4.0.0: styling/321/popover-header-padding-x; type=string; label=$popover-header-padding-x:
+            popover-header-padding-x = .75rem
+
+            # cat=bootstrap 4.0.0: styling/321/popover-body-color; type=string; label=$popover-body-color:
+            popover-body-color = $body-color
+            # cat=bootstrap 4.0.0: styling/321/popover-body-padding-y; type=string; label=$popover-body-padding-y:
+            popover-body-padding-y = $popover-header-padding-y
+            # cat=bootstrap 4.0.0: styling/321/popover-body-padding-x; type=string; label=$popover-body-padding-x:
+            popover-body-padding-x = $popover-header-padding-x
+
+            # cat=bootstrap 4.0.0: styling/321/popover-arrow-width; type=string; label=$popover-arrow-width:
+            popover-arrow-width = 1rem
+            # cat=bootstrap 4.0.0: styling/321/popover-arrow-height; type=string; label=$popover-arrow-height:
+            popover-arrow-height = .5rem
+            # cat=bootstrap 4.0.0: styling/321/popover-arrow-color; type=string; label=$popover-arrow-color:
+            popover-arrow-color = $popover-bg
+
+            # cat=bootstrap 4.0.0: styling/321/popover-arrow-outer-color; type=string; label=$popover-arrow-outer-color:
+            popover-arrow-outer-color = fade-in($popover-border-color, .05)
+
+
+
+            ###
+            ### Badges
+            ###
+
+            # cat=bootstrap 4.0.0: styling/322/badge-font-size; type=string; label=$badge-font-size:
+            badge-font-size = 75%
+            # cat=bootstrap 4.0.0: styling/322/badge-font-weight; type=string; label=$badge-font-weight:
+            badge-font-weight = $font-weight-bold
+            # cat=bootstrap 4.0.0: styling/322/badge-padding-y; type=string; label=$badge-padding-y:
+            badge-padding-y = .25em
+            # cat=bootstrap 4.0.0: styling/322/badge-padding-x; type=string; label=$badge-padding-x:
+            badge-padding-x = .4em
+            # cat=bootstrap 4.0.0: styling/322/badge-border-radius; type=string; label=$badge-border-radius:
+            badge-border-radius = $border-radius
+
+            # cat=bootstrap 4.0.0: styling/322/badge-pill-padding-x; type=string; label=$badge-pill-padding-x:
+            badge-pill-padding-x = .6em
+            # cat=bootstrap 4.0.0: styling/322/badge-pill-border-radius; type=string; label=$badge-pill-border-radius:
+            badge-pill-border-radius = 10rem
+
+
+
+            ###
+            ### Modals
+            ###
+
+            # cat=bootstrap 4.0.0: styling/323/modal-inner-padding; type=string; label=$modal-inner-padding:
+            modal-inner-padding = 1rem
+
+            # cat=bootstrap 4.0.0: styling/323/modal-dialog-margin; type=string; label=$modal-dialog-margin:
+            modal-dialog-margin = .5rem
+            # cat=bootstrap 4.0.0: styling/323/modal-dialog-margin-y-sm-up; type=string; label=$modal-dialog-margin-y-sm-up:
+            modal-dialog-margin-y-sm-up = 1.75rem
+
+            # cat=bootstrap 4.0.0: styling/323/modal-title-line-height; type=string; label=$modal-title-line-height:
+            modal-title-line-height = $line-height-base
+
+            # cat=bootstrap 4.0.0: styling/323/modal-content-bg; type=string; label=$modal-content-bg:
+            modal-content-bg = $white
+            # cat=bootstrap 4.0.0: styling/323/modal-content-border-color; type=string; label=$modal-content-border-color:
+            modal-content-border-color = rgba($black, .2)
+            # cat=bootstrap 4.0.0: styling/323/modal-content-border-width; type=string; label=$modal-content-border-width:
+            modal-content-border-width = $border-width
+            # cat=bootstrap 4.0.0: styling/323/modal-content-box-shadow-xs; type=string; label=$modal-content-box-shadow-xs:
+            modal-content-box-shadow-xs = 0 .25rem .5rem rgba($black, .5)
+            # cat=bootstrap 4.0.0: styling/323/modal-content-box-shadow-sm-up; type=string; label=$modal-content-box-shadow-sm-up:
+            modal-content-box-shadow-sm-up = 0 .5rem 1rem rgba($black, .5)
+
+            # cat=bootstrap 4.0.0: styling/323/modal-backdrop-bg; type=string; label=$modal-backdrop-bg:
+            modal-backdrop-bg = $black
+            # cat=bootstrap 4.0.0: styling/323/modal-backdrop-opacity; type=string; label=$modal-backdrop-opacity:
+            modal-backdrop-opacity = .5
+            # cat=bootstrap 4.0.0: styling/323/modal-header-border-color; type=string; label=$modal-header-border-color:
+            modal-header-border-color = $gray-200
+            # cat=bootstrap 4.0.0: styling/323/modal-footer-border-color; type=string; label=$modal-footer-border-color:
+            modal-footer-border-color = $modal-header-border-color
+            # cat=bootstrap 4.0.0: styling/323/modal-header-border-width; type=string; label=$modal-header-border-width:
+            modal-header-border-width = $modal-content-border-width
+            # cat=bootstrap 4.0.0: styling/323/modal-footer-border-width; type=string; label=$modal-footer-border-width:
+            modal-footer-border-width = $modal-header-border-width
+            # cat=bootstrap 4.0.0: styling/323/modal-header-padding; type=string; label=$modal-header-padding:
+            modal-header-padding = 1rem
+
+            # cat=bootstrap 4.0.0: styling/323/modal-lg; type=string; label=$modal-lg:
+            modal-lg = 800px
+            # cat=bootstrap 4.0.0: styling/323/modal-md; type=string; label=$modal-md:
+            modal-md = 500px
+            # cat=bootstrap 4.0.0: styling/323/modal-sm; type=string; label=$modal-sm:
+            modal-sm = 300px
+
+            # cat=bootstrap 4.0.0: styling/323/modal-transition; type=string; label=$modal-transition:
+            modal-transition = transform .3s ease-out
         }
     }
 }
