@@ -19,6 +19,10 @@
 # customsubcategory=314=Z-index
 # customsubcategory=315=Nav
 # customsubcategory=316=Navbar
+# customsubcategory=317=Pagination
+# customsubcategory=318=Jumbotron
+# customsubcategory=319=Cards
+# customsubcategory=320=Tooltips
 
 
 plugin.bootstrap_package {
@@ -879,6 +883,144 @@ plugin.bootstrap_package {
             navbar-light-toggler-icon-bg = str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23")
             # cat=bootstrap 4.0.0: styling/316/navbar-light-toggler-border-color; type=string; label=$navbar-light-toggler-border-color:
             navbar-light-toggler-border-color = rgba($black, .1)
+
+
+
+            ###
+            ### Pagination
+            ###
+
+            # cat=bootstrap 4.0.0: styling/317/pagination-padding-y; type=string; label=$pagination-padding-y:
+            pagination-padding-y = .5rem
+            # cat=bootstrap 4.0.0: styling/317/pagination-padding-x; type=string; label=$pagination-padding-x:
+            pagination-padding-x = .75rem
+            # cat=bootstrap 4.0.0: styling/317/pagination-padding-y-sm; type=string; label=$pagination-padding-y-sm:
+            pagination-padding-y-sm = .25rem
+            # cat=bootstrap 4.0.0: styling/317/pagination-padding-x-sm; type=string; label=$pagination-padding-x-sm:
+            pagination-padding-x-sm = .5rem
+            # cat=bootstrap 4.0.0: styling/317/pagination-padding-y-lg; type=string; label=$pagination-padding-y-lg:
+            pagination-padding-y-lg = .75rem
+            # cat=bootstrap 4.0.0: styling/317/pagination-padding-x-lg; type=string; label=$pagination-padding-x-lg:
+            pagination-padding-x-lg = 1.5rem
+            # cat=bootstrap 4.0.0: styling/317/pagination-line-height; type=string; label=$pagination-line-height:
+            pagination-line-height = 1.25
+
+            # cat=bootstrap 4.0.0: styling/317/pagination-color; type=string; label=$pagination-color:
+            pagination-color = $link-color
+            # cat=bootstrap 4.0.0: styling/317/pagination-bg; type=string; label=$pagination-bg:
+            pagination-bg = $white
+            # cat=bootstrap 4.0.0: styling/317/pagination-border-width; type=string; label=$pagination-border-width:
+            pagination-border-width = $border-width
+            # cat=bootstrap 4.0.0: styling/317/pagination-border-color; type=string; label=$pagination-border-color:
+            pagination-border-color = $gray-300
+
+            # cat=bootstrap 4.0.0: styling/317/pagination-focus-box-shadow; type=string; label=$pagination-focus-box-shadow:
+            pagination-focus-box-shadow = $input-btn-focus-box-shadow
+
+            # cat=bootstrap 4.0.0: styling/317/pagination-hover-color; type=string; label=$pagination-hover-color:
+            pagination-hover-color = $link-hover-color
+            # cat=bootstrap 4.0.0: styling/317/pagination-hover-bg; type=string; label=$pagination-hover-bg:
+            pagination-hover-bg = $gray-200
+            # cat=bootstrap 4.0.0: styling/317/pagination-hover-border-color; type=string; label=$pagination-hover-border-color:
+            pagination-hover-border-color = $gray-300
+
+            # cat=bootstrap 4.0.0: styling/317/pagination-active-color; type=string; label=$pagination-active-color:
+            pagination-active-color = $component-active-color
+            # cat=bootstrap 4.0.0: styling/317/pagination-active-bg; type=string; label=$pagination-active-bg:
+            pagination-active-bg = $component-active-bg
+            # cat=bootstrap 4.0.0: styling/317/pagination-active-border-color; type=string; label=$pagination-active-border-color:
+            pagination-active-border-color = $pagination-active-bg
+
+            # cat=bootstrap 4.0.0: styling/317/pagination-disabled-color; type=string; label=$pagination-disabled-color:
+            pagination-disabled-color = $gray-600
+            # cat=bootstrap 4.0.0: styling/317/pagination-disabled-bg; type=string; label=$pagination-disabled-bg:
+            pagination-disabled-bg = $white
+            # cat=bootstrap 4.0.0: styling/317/pagination-disabled-border-color; type=string; label=$pagination-disabled-border-color:
+            pagination-disabled-border-color = $gray-300
+
+
+
+            ###
+            ### Jumbotron
+            ###
+
+            # cat=bootstrap 4.0.0: styling/318/jumbotron-padding; type=string; label=$jumbotron-padding:
+            jumbotron-padding = 2rem
+            # cat=bootstrap 4.0.0: styling/318/jumbotron-bg; type=string; label=$jumbotron-bg:
+            jumbotron-bg = $gray-200
+
+
+
+            ###
+            ### Cards
+            ###
+
+            # cat=bootstrap 4.0.0: styling/319/card-spacer-y; type=string; label=$card-spacer-y:
+            card-spacer-y = .75rem
+            # cat=bootstrap 4.0.0: styling/319/card-spacer-x; type=string; label=$card-spacer-x:
+            card-spacer-x = 1.25rem
+            # cat=bootstrap 4.0.0: styling/319/card-border-width; type=string; label=$card-border-width:
+            card-border-width = $border-width
+            # cat=bootstrap 4.0.0: styling/319/card-border-radius; type=string; label=$card-border-radius:
+            card-border-radius = $border-radius
+            # cat=bootstrap 4.0.0: styling/319/card-border-color; type=string; label=$card-border-color:
+            card-border-color = rgba($black, .125)
+            # cat=bootstrap 4.0.0: styling/319/card-inner-border-radius; type=string; label=$card-inner-border-radius:
+            card-inner-border-radius = calc(#{$card-border-radius} - #{$card-border-width})
+            # cat=bootstrap 4.0.0: styling/319/card-cap-bg; type=string; label=$card-cap-bg:
+            card-cap-bg = rgba($black, .03)
+            # cat=bootstrap 4.0.0: styling/319/card-bg; type=string; label=$card-bg:
+            card-bg = $white
+
+            # cat=bootstrap 4.0.0: styling/319/card-img-overlay-padding; type=string; label=$card-img-overlay-padding:
+            card-img-overlay-padding = 1.25rem
+
+            # cat=bootstrap 4.0.0: styling/319/card-group-margin; type=string; label=$card-group-margin:
+            card-group-margin = ($grid-gutter-width / 2)
+            # cat=bootstrap 4.0.0: styling/319/card-deck-margin; type=string; label=$card-deck-margin:
+            card-deck-margin = $card-group-margin
+
+            # cat=bootstrap 4.0.0: styling/319/card-columns-count; type=string; label=$card-columns-count:
+            card-columns-count = 3
+            # cat=bootstrap 4.0.0: styling/319/card-columns-gap; type=string; label=$card-columns-gap:
+            card-columns-gap = 1.25rem
+            # cat=bootstrap 4.0.0: styling/319/card-columns-margin; type=string; label=$card-columns-margin:
+            card-columns-margin = $card-spacer-y
+
+
+
+            ###
+            ### Tooltips
+            ###
+
+            # cat=bootstrap 4.0.0: styling/320/tooltip-font-size; type=string; label=$tooltip-font-size:
+            tooltip-font-size = $font-size-sm
+            # cat=bootstrap 4.0.0: styling/320/tooltip-max-width; type=string; label=$tooltip-max-width:
+            tooltip-max-width = 200px
+            # cat=bootstrap 4.0.0: styling/320/tooltip-color; type=string; label=$tooltip-color:
+            tooltip-color = $white
+            # cat=bootstrap 4.0.0: styling/320/tooltip-bg; type=string; label=$tooltip-bg:
+            tooltip-bg = $black
+            # cat=bootstrap 4.0.0: styling/320/tooltip-border-radius; type=string; label=$tooltip-border-radius:
+            tooltip-border-radius = $border-radius
+            # cat=bootstrap 4.0.0: styling/320/tooltip-opacity; type=string; label=$tooltip-opacity:
+            tooltip-opacity = .9
+            # cat=bootstrap 4.0.0: styling/320/tooltip-padding-y; type=string; label=$tooltip-padding-y:
+            tooltip-padding-y = .25rem
+            # cat=bootstrap 4.0.0: styling/320/tooltip-padding-x; type=string; label=$tooltip-padding-x:
+            tooltip-padding-x = .5rem
+            # cat=bootstrap 4.0.0: styling/320/tooltip-margin; type=string; label=$tooltip-margin:
+            tooltip-margin = 0
+
+            # cat=bootstrap 4.0.0: styling/320/tooltip-arrow-width; type=string; label=$tooltip-arrow-width:
+            tooltip-arrow-width = .8rem
+            # cat=bootstrap 4.0.0: styling/320/tooltip-arrow-height; type=string; label=$tooltip-arrow-height:
+            tooltip-arrow-height = .4rem
+            # cat=bootstrap 4.0.0: styling/320/tooltip-arrow-color; type=string; label=$tooltip-arrow-color:
+            tooltip-arrow-color = $tooltip-bg
+
+
+
         }
     }
 }
