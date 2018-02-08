@@ -13,6 +13,8 @@
 # customsubcategory=308=Fonts
 # customsubcategory=309=Tables
 # customsubcategory=310=Buttons + Forms
+# customsubcategory=311=Buttons
+# customsubcategory=312=Forms
 
 
 plugin.bootstrap_package {
@@ -409,15 +411,311 @@ plugin.bootstrap_package {
 
 
 
+            ###
+            ### Buttons
+            ###
+
+            # cat=bootstrap 4.0.0: styling/311/btn-padding-y; type=string; label=$btn-padding-y:
+            btn-padding-y = $input-btn-padding-y
+            # cat=bootstrap 4.0.0: styling/311/btn-padding-x; type=string; label=$btn-padding-x:
+            btn-padding-x = $input-btn-padding-x
+            # cat=bootstrap 4.0.0: styling/311/btn-line-height; type=string; label=$btn-line-height:
+            btn-line-height = $input-btn-line-height
+
+            # cat=bootstrap 4.0.0: styling/311/btn-padding-y-sm; type=string; label=$btn-padding-y-sm:
+            btn-padding-y-sm = $input-btn-padding-y-sm
+            # cat=bootstrap 4.0.0: styling/311/btn-padding-x-sm; type=string; label=$btn-padding-x-sm:
+            btn-padding-x-sm = $input-btn-padding-x-sm
+            # cat=bootstrap 4.0.0: styling/311/btn-line-height-sm; type=string; label=$btn-line-height-sm:
+            btn-line-height-sm = $input-btn-line-height-sm
+
+            # cat=bootstrap 4.0.0: styling/311/btn-padding-y-lg; type=string; label=$btn-padding-y-lg:
+            btn-padding-y-lg = $input-btn-padding-y-lg
+            # cat=bootstrap 4.0.0: styling/311/btn-padding-x-lg; type=string; label=$btn-padding-x-lg:
+            btn-padding-x-lg = $input-btn-padding-x-lg
+            # cat=bootstrap 4.0.0: styling/311/btn-line-height-lg; type=string; label=$btn-line-height-lg:
+            btn-line-height-lg = $input-btn-line-height-lg
+
+            # cat=bootstrap 4.0.0: styling/311/btn-border-width; type=string; label=$btn-border-width:
+            btn-border-width = $input-btn-border-width
+
+            # cat=bootstrap 4.0.0: styling/311/btn-font-weight; type=string; label=$btn-font-weight:
+            btn-font-weight = $font-weight-normal
+            # cat=bootstrap 4.0.0: styling/311/btn-box-shadow; type=string; label=$btn-box-shadow:
+            btn-box-shadow = inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075)
+            # cat=bootstrap 4.0.0: styling/311/btn-focus-width; type=string; label=$btn-focus-width:
+            btn-focus-width = $input-btn-focus-width
+            # cat=bootstrap 4.0.0: styling/311/btn-focus-box-shadow; type=string; label=$btn-focus-box-shadow:
+            btn-focus-box-shadow = $input-btn-focus-box-shadow
+            # cat=bootstrap 4.0.0: styling/311/btn-disabled-opacity; type=string; label=$btn-disabled-opacity:
+            btn-disabled-opacity = .65
+            # cat=bootstrap 4.0.0: styling/311/btn-active-box-shadow; type=string; label=$btn-active-box-shadow:
+            btn-active-box-shadow = inset 0 3px 5px rgba($black, .125)
+
+            # cat=bootstrap 4.0.0: styling/311/btn-link-disabled-color; type=string; label=$btn-link-disabled-color:
+            btn-link-disabled-color = $gray-600
+
+            # cat=bootstrap 4.0.0: styling/311/btn-block-spacing-y; type=string; label=$btn-block-spacing-y:
+            btn-block-spacing-y = .5rem
+
+            # cat=bootstrap 4.0.0: styling/311/btn-border-radius; type=string; label=$btn-border-radius:
+            btn-border-radius = $border-radius
+            # cat=bootstrap 4.0.0: styling/311/btn-border-radius-lg; type=string; label=$btn-border-radius-lg:
+            btn-border-radius-lg = $border-radius-lg
+            # cat=bootstrap 4.0.0: styling/311/btn-border-radius-sm; type=string; label=$btn-border-radius-sm:
+            btn-border-radius-sm = $border-radius-sm
+
+            # cat=bootstrap 4.0.0: styling/311/btn-transition; type=string; label=$btn-transition:
+            btn-transition = color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
+
+
+
+            ###
+            ### Forms
+            ###
 
 
 
 
+            # cat=bootstrap 4.0.0: styling/312/input-padding-y-sm; type=string; label=$input-padding-y-sm:
+            input-padding-y-sm = $input-btn-padding-y-sm
+            # cat=bootstrap 4.0.0: styling/312/input-padding-x-sm; type=string; label=$input-padding-x-sm:
+            input-padding-x-sm = $input-btn-padding-x-sm
+            # cat=bootstrap 4.0.0: styling/312/input-line-height-sm; type=string; label=$input-line-height-sm:
+            input-line-height-sm = $input-btn-line-height-sm
 
 
+            # cat=bootstrap 4.0.0: styling/312/input-padding-y-lg; type=string; label=$input-padding-y-lg:
+            input-padding-y-lg = $input-btn-padding-y-lg
+            # cat=bootstrap 4.0.0: styling/312/input-padding-x-lg; type=string; label=$input-padding-x-lg:
+            input-padding-x-lg = $input-btn-padding-x-lg
+            # cat=bootstrap 4.0.0: styling/312/input-line-height-lg; type=string; label=$input-line-height-lg:
+            input-line-height-lg = $input-btn-line-height-lg
 
+            # cat=bootstrap 4.0.0: styling/312/input-bg; type=string; label=$input-bg:
+            input-bg = $white
+            # cat=bootstrap 4.0.0: styling/312/input-disabled-bg; type=string; label=$input-disabled-bg:
+            input-disabled-bg = $gray-200
 
+            # cat=bootstrap 4.0.0: styling/312/input-color; type=string; label=$input-color:
+            input-color = $gray-700
+            # cat=bootstrap 4.0.0: styling/312/input-border-color; type=string; label=$input-border-color:
+            input-border-color = $gray-400
+            # cat=bootstrap 4.0.0: styling/312/input-border-width; type=string; label=$input-border-width:
+            input-border-width = $input-btn-border-width
+            # cat=bootstrap 4.0.0: styling/312/input-box-shadow; type=string; label=$input-box-shadow:
+            input-box-shadow = inset 0 1px 1px rgba($black, .075)
 
+            # cat=bootstrap 4.0.0: styling/312/input-border-radius; type=string; label=$input-border-radius:
+            input-border-radius = $border-radius
+            # cat=bootstrap 4.0.0: styling/312/input-border-radius-lg; type=string; label=$input-border-radius-lg:
+            input-border-radius-lg = $border-radius-lg
+            # cat=bootstrap 4.0.0: styling/312/input-border-radius-sm; type=string; label=$input-border-radius-sm:
+            input-border-radius-sm = $border-radius-sm
+
+            # cat=bootstrap 4.0.0: styling/312/input-focus-bg; type=string; label=$input-focus-bg:
+            input-focus-bg = $input-bg
+            # cat=bootstrap 4.0.0: styling/312/input-focus-border-color; type=string; label=$input-focus-border-color:
+            input-focus-border-color = lighten($component-active-bg, 25%)
+            # cat=bootstrap 4.0.0: styling/312/input-focus-color; type=string; label=$input-focus-color:
+            input-focus-color = $input-color
+            # cat=bootstrap 4.0.0: styling/312/input-focus-width; type=string; label=$input-focus-width:
+            input-focus-width = $input-btn-focus-width
+            # cat=bootstrap 4.0.0: styling/312/input-focus-box-shadow; type=string; label=$input-focus-box-shadow:
+            input-focus-box-shadow = $input-btn-focus-box-shadow
+
+            # cat=bootstrap 4.0.0: styling/312/input-placeholder-color; type=string; label=$input-placeholder-color:
+            input-placeholder-color = $gray-600
+
+            # cat=bootstrap 4.0.0: styling/312/input-height-border; type=string; label=$input-height-border:
+            input-height-border = $input-border-width * 2
+
+            # cat=bootstrap 4.0.0: styling/312/input-height-inner; type=string; label=$input-height-inner:
+            input-height-inner = ($font-size-base * $input-btn-line-height) + ($input-btn-padding-y * 2)
+            # cat=bootstrap 4.0.0: styling/312/input-height; type=string; label=$input-height:
+            input-height = calc(#{$input-height-inner} + #{$input-height-border})
+
+            # cat=bootstrap 4.0.0: styling/312/input-height-inner-sm; type=string; label=$input-height-inner-sm:
+            input-height-inner-sm = ($font-size-sm * $input-btn-line-height-sm) + ($input-btn-padding-y-sm * 2)
+            # cat=bootstrap 4.0.0: styling/312/input-height-sm; type=string; label=$input-height-sm:
+            input-height-sm = calc(#{$input-height-inner-sm} + #{$input-height-border})
+
+            # cat=bootstrap 4.0.0: styling/312/input-height-inner-lg; type=string; label=$input-height-inner-lg:
+            input-height-inner-lg = ($font-size-lg * $input-btn-line-height-lg) + ($input-btn-padding-y-lg * 2)
+            # cat=bootstrap 4.0.0: styling/312/input-height-lg; type=string; label=$input-height-lg:
+            input-height-lg = calc(#{$input-height-inner-lg} + #{$input-height-border})
+
+            # cat=bootstrap 4.0.0: styling/312/input-transition; type=string; label=$input-transition:
+            input-transition = border-color .15s ease-in-out, box-shadow .15s ease-in-out
+
+            # cat=bootstrap 4.0.0: styling/312/form-text-margin-top; type=string; label=$form-text-margin-top:
+            form-text-margin-top = .25rem
+
+            # cat=bootstrap 4.0.0: styling/312/form-check-input-gutter; type=string; label=$form-check-input-gutter:
+            form-check-input-gutter = 1.25rem
+            # cat=bootstrap 4.0.0: styling/312/form-check-input-margin-y; type=string; label=$form-check-input-margin-y:
+            form-check-input-margin-y = .3rem
+            # cat=bootstrap 4.0.0: styling/312/form-check-input-margin-x; type=string; label=$form-check-input-margin-x:
+            form-check-input-margin-x = .25rem
+
+            # cat=bootstrap 4.0.0: styling/312/form-check-inline-margin-x; type=string; label=$form-check-inline-margin-x:
+            form-check-inline-margin-x = .75rem
+            # cat=bootstrap 4.0.0: styling/312/form-check-inline-input-margin-x; type=string; label=$form-check-inline-input-margin-x:
+            form-check-inline-input-margin-x = .3125rem
+
+            # cat=bootstrap 4.0.0: styling/312/form-group-margin-bottom; type=string; label=$form-group-margin-bottom:
+            form-group-margin-bottom = 1rem
+
+            # cat=bootstrap 4.0.0: styling/312/input-group-addon-color; type=string; label=$input-group-addon-color:
+            input-group-addon-color = $input-color
+            # cat=bootstrap 4.0.0: styling/312/input-group-addon-bg; type=string; label=$input-group-addon-bg:
+            input-group-addon-bg = $gray-200
+            # cat=bootstrap 4.0.0: styling/312/input-group-addon-border-color; type=string; label=$input-group-addon-border-color:
+            input-group-addon-border-color = $input-border-color
+
+            # cat=bootstrap 4.0.0: styling/312/custom-control-gutter; type=string; label=$custom-control-gutter:
+            custom-control-gutter = 1.5rem
+            # cat=bootstrap 4.0.0: styling/312/custom-control-spacer-x; type=string; label=$custom-control-spacer-x:
+            custom-control-spacer-x = 1rem
+
+            # cat=bootstrap 4.0.0: styling/312/custom-control-indicator-size; type=string; label=$custom-control-indicator-size:
+            custom-control-indicator-size = 1rem
+            # cat=bootstrap 4.0.0: styling/312/custom-control-indicator-bg; type=string; label=$custom-control-indicator-bg:
+            custom-control-indicator-bg = $gray-300
+            # cat=bootstrap 4.0.0: styling/312/custom-control-indicator-bg-size; type=string; label=$custom-control-indicator-bg-size:
+            custom-control-indicator-bg-size = 50% 50%
+            # cat=bootstrap 4.0.0: styling/312/custom-control-indicator-box-shadow; type=string; label=$custom-control-indicator-box-shadow:
+            custom-control-indicator-box-shadow = inset 0 .25rem .25rem rgba($black, .1)
+
+            # cat=bootstrap 4.0.0: styling/312/custom-control-indicator-disabled-bg; type=string; label=$custom-control-indicator-disabled-bg:
+            custom-control-indicator-disabled-bg = $gray-200
+            # cat=bootstrap 4.0.0: styling/312/custom-control-label-disabled-color; type=string; label=$custom-control-label-disabled-color:
+            custom-control-label-disabled-color = $gray-600
+
+            # cat=bootstrap 4.0.0: styling/312/custom-control-indicator-checked-color; type=string; label=$custom-control-indicator-checked-color:
+            custom-control-indicator-checked-color = $component-active-color
+            # cat=bootstrap 4.0.0: styling/312/custom-control-indicator-checked-bg; type=string; label=$custom-control-indicator-checked-bg:
+            custom-control-indicator-checked-bg = $component-active-bg
+            # cat=bootstrap 4.0.0: styling/312/custom-control-indicator-checked-disabled-bg; type=string; label=$custom-control-indicator-checked-disabled-bg:
+            custom-control-indicator-checked-disabled-bg = rgba(theme-color("primary"), .5)
+            # cat=bootstrap 4.0.0: styling/312/custom-control-indicator-checked-box-shadow; type=string; label=$custom-control-indicator-checked-box-shadow:
+            custom-control-indicator-checked-box-shadow = none
+
+            # cat=bootstrap 4.0.0: styling/312/custom-control-indicator-focus-box-shadow; type=string; label=$custom-control-indicator-focus-box-shadow:
+            custom-control-indicator-focus-box-shadow = 0 0 0 1px $body-bg, $input-btn-focus-box-shadow
+
+            # cat=bootstrap 4.0.0: styling/312/custom-control-indicator-active-color; type=string; label=$custom-control-indicator-active-color:
+            custom-control-indicator-active-color = $component-active-color
+            # cat=bootstrap 4.0.0: styling/312/custom-control-indicator-active-bg; type=string; label=$custom-control-indicator-active-bg:
+            custom-control-indicator-active-bg = lighten($component-active-bg, 35%)
+            # cat=bootstrap 4.0.0: styling/312/custom-control-indicator-active-box-shadow; type=string; label=$custom-control-indicator-active-box-shadow:
+            custom-control-indicator-active-box-shadow = none
+
+            # cat=bootstrap 4.0.0: styling/312/custom-checkbox-indicator-border-radius; type=string; label=$custom-checkbox-indicator-border-radius:
+            custom-checkbox-indicator-border-radius = $border-radius
+            # cat=bootstrap 4.0.0: styling/312/custom-checkbox-indicator-icon-checked; type=string; label=$custom-checkbox-indicator-icon-checked:
+            custom-checkbox-indicator-icon-checked = str-replace(url("data = image/svg+xml;charset=utf8,%3Csvg xmlns='http = //www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$custom-control-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"), "#", "%23")
+
+            # cat=bootstrap 4.0.0: styling/312/custom-checkbox-indicator-indeterminate-bg; type=string; label=$custom-checkbox-indicator-indeterminate-bg:
+            custom-checkbox-indicator-indeterminate-bg = $component-active-bg
+            # cat=bootstrap 4.0.0: styling/312/custom-checkbox-indicator-indeterminate-color; type=string; label=$custom-checkbox-indicator-indeterminate-color:
+            custom-checkbox-indicator-indeterminate-color = $custom-control-indicator-checked-color
+            # cat=bootstrap 4.0.0: styling/312/custom-checkbox-indicator-icon-indeterminate; type=string; label=$custom-checkbox-indicator-icon-indeterminate:
+            custom-checkbox-indicator-icon-indeterminate = str-replace(url("data = image/svg+xml;charset=utf8,%3Csvg xmlns='http = //www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='#{$custom-checkbox-indicator-indeterminate-color}' d='M0 2h4'/%3E%3C/svg%3E"), "#", "%23")
+            # cat=bootstrap 4.0.0: styling/312/custom-checkbox-indicator-indeterminate-box-shadow; type=string; label=$custom-checkbox-indicator-indeterminate-box-shadow:
+            custom-checkbox-indicator-indeterminate-box-shadow = none
+
+            # cat=bootstrap 4.0.0: styling/312/custom-radio-indicator-border-radius; type=string; label=$custom-radio-indicator-border-radius:
+            custom-radio-indicator-border-radius = 50%
+            # cat=bootstrap 4.0.0: styling/312/custom-radio-indicator-icon-checked; type=string; label=$custom-radio-indicator-icon-checked:
+            custom-radio-indicator-icon-checked = str-replace(url("data = image/svg+xml;charset=utf8,%3Csvg xmlns='http = //www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='#{$custom-control-indicator-checked-color}'/%3E%3C/svg%3E"), "#", "%23")
+
+            # cat=bootstrap 4.0.0: styling/312/custom-select-padding-y; type=string; label=$custom-select-padding-y:
+            custom-select-padding-y = .375rem
+            # cat=bootstrap 4.0.0: styling/312/custom-select-padding-x; type=string; label=$custom-select-padding-x:
+            custom-select-padding-x = .75rem
+            # cat=bootstrap 4.0.0: styling/312/custom-select-height; type=string; label=$custom-select-height:
+            custom-select-height = $input-height
+            # cat=bootstrap 4.0.0: styling/312/custom-select-indicator-padding; type=string; label=$custom-select-indicator-padding:
+            custom-select-indicator-padding = 1rem // Extra padding to account for the presence of the background-image based indicator
+            # cat=bootstrap 4.0.0: styling/312/custom-select-line-height; type=string; label=$custom-select-line-height:
+            custom-select-line-height = $input-btn-line-height
+            # cat=bootstrap 4.0.0: styling/312/custom-select-color; type=string; label=$custom-select-color:
+            custom-select-color = $input-color
+            # cat=bootstrap 4.0.0: styling/312/custom-select-disabled-color; type=string; label=$custom-select-color:
+            custom-select-disabled-color = $gray-600
+            # cat=bootstrap 4.0.0: styling/312/custom-select-bg; type=string; label=$custom-select-bg:
+            custom-select-bg = $white
+            # cat=bootstrap 4.0.0: styling/312/custom-select-disabled-bg; type=string; label=$custom-select-disabled-bg:
+            custom-select-disabled-bg = $gray-200
+            # cat=bootstrap 4.0.0: styling/312/custom-select-bg-size; type=string; label=$custom-select-bg-size:
+            custom-select-bg-size = 8px 10px // In pixels because image dimensions
+            # cat=bootstrap 4.0.0: styling/312/custom-select-indicator-color; type=string; label=$custom-select-indicator-color:
+            custom-select-indicator-color = $gray-800
+            # cat=bootstrap 4.0.0: styling/312/custom-select-indicator; type=string; label=$custom-select-indicator:
+            custom-select-indicator = str-replace(url("data = image/svg+xml;charset=utf8,%3Csvg xmlns='http = //www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23")
+            # cat=bootstrap 4.0.0: styling/312/custom-select-border-width; type=string; label=$custom-select-border-width:
+            custom-select-border-width = $input-btn-border-width
+            # cat=bootstrap 4.0.0: styling/312/custom-select-border-color; type=string; label=$custom-select-border-color:
+            custom-select-border-color = $input-border-color
+            # cat=bootstrap 4.0.0: styling/312/custom-select-border-radius; type=string; label=$custom-select-border-radius:
+            custom-select-border-radius = $border-radius
+
+            # cat=bootstrap 4.0.0: styling/312/custom-select-focus-border-color; type=string; label=$custom-select-focus-border-color:
+            custom-select-focus-border-color = $input-focus-border-color
+            # cat=bootstrap 4.0.0: styling/312/custom-select-focus-box-shadow; type=string; label=$custom-select-focus-box-shadow:
+            custom-select-focus-box-shadow = inset 0 1px 2px rgba($black, .075), 0 0 5px rgba($custom-select-focus-border-color, .5)
+
+            # cat=bootstrap 4.0.0: styling/312/custom-select-font-size-sm; type=string; label=$custom-select-font-size-sm:
+            custom-select-font-size-sm = 75%
+            # cat=bootstrap 4.0.0: styling/312/custom-select-height-sm; type=string; label=$custom-select-height-sm:
+            custom-select-height-sm = $input-height-sm
+
+            # cat=bootstrap 4.0.0: styling/312/custom-select-font-size-lg; type=string; label=$custom-select-font-size-lg:
+            custom-select-font-size-lg = 125%
+            # cat=bootstrap 4.0.0: styling/312/custom-select-height-lg; type=string; label=$custom-select-height-lg:
+            custom-select-height-lg = $input-height-lg
+
+            # cat=bootstrap 4.0.0: styling/312/custom-file-height; type=string; label=$custom-file-height:
+            custom-file-height = $input-height
+            # cat=bootstrap 4.0.0: styling/312/custom-file-focus-border-color; type=string; label=$custom-file-focus-border-color:
+            custom-file-focus-border-color = $input-focus-border-color
+            # cat=bootstrap 4.0.0: styling/312/custom-file-focus-box-shadow; type=string; label=$custom-file-focus-box-shadow:
+            custom-file-focus-box-shadow = $input-btn-focus-box-shadow
+
+            # cat=bootstrap 4.0.0: styling/312/custom-file-padding-y; type=string; label=$custom-file-padding-y:
+            custom-file-padding-y = $input-btn-padding-y
+            # cat=bootstrap 4.0.0: styling/312/custom-file-padding-x; type=string; label=$custom-file-padding-x:
+            custom-file-padding-x = $input-btn-padding-x
+            # cat=bootstrap 4.0.0: styling/312/custom-file-line-height; type=string; label=$custom-file-line-height:
+            custom-file-line-height = $input-btn-line-height
+            # cat=bootstrap 4.0.0: styling/312/custom-file-color; type=string; label=$custom-file-color:
+            custom-file-color = $input-color
+            # cat=bootstrap 4.0.0: styling/312/custom-file-bg; type=string; label=$custom-file-bg:
+            custom-file-bg = $input-bg
+            # cat=bootstrap 4.0.0: styling/312/custom-file-border-width; type=string; label=$custom-file-border-width:
+            custom-file-border-width = $input-btn-border-width
+            # cat=bootstrap 4.0.0: styling/312/custom-file-border-color; type=string; label=$custom-file-border-color:
+            custom-file-border-color = $input-border-color
+            # cat=bootstrap 4.0.0: styling/312/custom-file-border-radius; type=string; label=$custom-file-border-radius:
+            custom-file-border-radius = $input-border-radius
+            # cat=bootstrap 4.0.0: styling/312/custom-file-box-shadow; type=string; label=$custom-file-box-shadow:
+            custom-file-box-shadow = $input-box-shadow
+            # cat=bootstrap 4.0.0: styling/312/custom-file-button-color; type=string; label=$custom-file-button-color:
+            custom-file-button-color = $custom-file-color
+            # cat=bootstrap 4.0.0: styling/312/custom-file-button-bg; type=string; label=$custom-file-button-bg:
+            custom-file-button-bg = $input-group-addon-bg
+            # cat=bootstrap 4.0.0: styling/312/custom-file-text-en; type=string; label=$custom-file-text-en:
+            custom-file-text-en = Browse
+
+            # cat=bootstrap 4.0.0: styling/312/form-feedback-margin-top; type=string; label=$form-feedback-margin-top:
+            form-feedback-margin-top = $form-text-margin-top
+            # cat=bootstrap 4.0.0: styling/312/form-feedback-font-size; type=string; label=$form-feedback-font-size:
+            form-feedback-font-size = $small-font-size
+            # cat=bootstrap 4.0.0: styling/312/form-feedback-valid-color; type=string; label=$form-feedback-valid-color:
+            form-feedback-valid-color = theme-color("success")
+            # cat=bootstrap 4.0.0: styling/312/form-feedback-invalid-color; type=string; label=$form-feedback-invalid-color:
+            form-feedback-invalid-color = theme-color("danger")
 
         }
     }
