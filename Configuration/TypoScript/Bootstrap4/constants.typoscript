@@ -17,6 +17,8 @@
 # customsubcategory=312=Forms
 # customsubcategory=313=Dropdowns
 # customsubcategory=314=Z-index
+# customsubcategory=315=Nav
+# customsubcategory=316=Navbar
 
 
 plugin.bootstrap_package {
@@ -613,21 +615,21 @@ plugin.bootstrap_package {
             # cat=bootstrap 4.0.0: styling/312/custom-checkbox-indicator-border-radius; type=string; label=$custom-checkbox-indicator-border-radius:
             custom-checkbox-indicator-border-radius = $border-radius
             # cat=bootstrap 4.0.0: styling/312/custom-checkbox-indicator-icon-checked; type=string; label=$custom-checkbox-indicator-icon-checked:
-            custom-checkbox-indicator-icon-checked = str-replace(url("data = image/svg+xml;charset=utf8,%3Csvg xmlns='http = //www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$custom-control-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"), "#", "%23")
+            custom-checkbox-indicator-icon-checked = str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$custom-control-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"), "#", "%23")
 
             # cat=bootstrap 4.0.0: styling/312/custom-checkbox-indicator-indeterminate-bg; type=string; label=$custom-checkbox-indicator-indeterminate-bg:
             custom-checkbox-indicator-indeterminate-bg = $component-active-bg
             # cat=bootstrap 4.0.0: styling/312/custom-checkbox-indicator-indeterminate-color; type=string; label=$custom-checkbox-indicator-indeterminate-color:
             custom-checkbox-indicator-indeterminate-color = $custom-control-indicator-checked-color
             # cat=bootstrap 4.0.0: styling/312/custom-checkbox-indicator-icon-indeterminate; type=string; label=$custom-checkbox-indicator-icon-indeterminate:
-            custom-checkbox-indicator-icon-indeterminate = str-replace(url("data = image/svg+xml;charset=utf8,%3Csvg xmlns='http = //www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='#{$custom-checkbox-indicator-indeterminate-color}' d='M0 2h4'/%3E%3C/svg%3E"), "#", "%23")
+            custom-checkbox-indicator-icon-indeterminate = str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='#{$custom-checkbox-indicator-indeterminate-color}' d='M0 2h4'/%3E%3C/svg%3E"), "#", "%23")
             # cat=bootstrap 4.0.0: styling/312/custom-checkbox-indicator-indeterminate-box-shadow; type=string; label=$custom-checkbox-indicator-indeterminate-box-shadow:
             custom-checkbox-indicator-indeterminate-box-shadow = none
 
             # cat=bootstrap 4.0.0: styling/312/custom-radio-indicator-border-radius; type=string; label=$custom-radio-indicator-border-radius:
             custom-radio-indicator-border-radius = 50%
             # cat=bootstrap 4.0.0: styling/312/custom-radio-indicator-icon-checked; type=string; label=$custom-radio-indicator-icon-checked:
-            custom-radio-indicator-icon-checked = str-replace(url("data = image/svg+xml;charset=utf8,%3Csvg xmlns='http = //www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='#{$custom-control-indicator-checked-color}'/%3E%3C/svg%3E"), "#", "%23")
+            custom-radio-indicator-icon-checked = str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='#{$custom-control-indicator-checked-color}'/%3E%3C/svg%3E"), "#", "%23")
 
             # cat=bootstrap 4.0.0: styling/312/custom-select-padding-y; type=string; label=$custom-select-padding-y:
             custom-select-padding-y = .375rem
@@ -652,7 +654,7 @@ plugin.bootstrap_package {
             # cat=bootstrap 4.0.0: styling/312/custom-select-indicator-color; type=string; label=$custom-select-indicator-color:
             custom-select-indicator-color = $gray-800
             # cat=bootstrap 4.0.0: styling/312/custom-select-indicator; type=string; label=$custom-select-indicator:
-            custom-select-indicator = str-replace(url("data = image/svg+xml;charset=utf8,%3Csvg xmlns='http = //www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23")
+            custom-select-indicator = str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23")
             # cat=bootstrap 4.0.0: styling/312/custom-select-border-width; type=string; label=$custom-select-border-width:
             custom-select-border-width = $input-btn-border-width
             # cat=bootstrap 4.0.0: styling/312/custom-select-border-color; type=string; label=$custom-select-border-color:
@@ -784,6 +786,99 @@ plugin.bootstrap_package {
             zindex-popover = 1060
             # cat=bootstrap 4.0.0: styling/314/zindex-tooltip; type=string; label=$zindex-tooltip:
             zindex-tooltip = 1070
+
+
+
+            ###
+            ### Navs
+            ###
+
+            # cat=bootstrap 4.0.0: styling/315/nav-link-padding-y; type=string; label=$nav-link-padding-y:
+            nav-link-padding-y = .5rem
+            # cat=bootstrap 4.0.0: styling/315/nav-link-padding-x; type=string; label=$nav-link-padding-x:
+            nav-link-padding-x = 1rem
+            # cat=bootstrap 4.0.0: styling/315/nav-link-disabled-color; type=string; label=$nav-link-disabled-color:
+            nav-link-disabled-color = $gray-600
+
+            # cat=bootstrap 4.0.0: styling/315/nav-tabs-border-color; type=string; label=$nav-tabs-border-color:
+            nav-tabs-border-color = $gray-300
+            # cat=bootstrap 4.0.0: styling/315/nav-tabs-border-width; type=string; label=$nav-tabs-border-width:
+            nav-tabs-border-width = $border-width
+            # cat=bootstrap 4.0.0: styling/315/nav-tabs-border-radius; type=string; label=$nav-tabs-border-radius:
+            nav-tabs-border-radius = $border-radius
+            # cat=bootstrap 4.0.0: styling/315/nav-tabs-link-hover-border-color; type=string; label=$nav-tabs-link-hover-border-color:
+            nav-tabs-link-hover-border-color = $gray-200 $gray-200 $nav-tabs-border-color
+            # cat=bootstrap 4.0.0: styling/315/nav-tabs-link-active-color; type=string; label=$nav-tabs-link-active-color:
+            nav-tabs-link-active-color = $gray-700
+            # cat=bootstrap 4.0.0: styling/315/nav-tabs-link-active-bg; type=string; label=$nav-tabs-link-active-bg:
+            nav-tabs-link-active-bg = $body-bg
+            # cat=bootstrap 4.0.0: styling/315/nav-tabs-link-active-border-color; type=string; label=$nav-tabs-link-active-border-color:
+            nav-tabs-link-active-border-color = $gray-300 $gray-300 $nav-tabs-link-active-bg
+
+            # cat=bootstrap 4.0.0: styling/315/nav-pills-border-radius; type=string; label=$nav-pills-border-radius:
+            nav-pills-border-radius = $border-radius
+            # cat=bootstrap 4.0.0: styling/315/nav-pills-link-active-color; type=string; label=$nav-pills-link-active-color:
+            nav-pills-link-active-color = $component-active-color
+            # cat=bootstrap 4.0.0: styling/315/nav-pills-link-active-bg; type=string; label=$nav-pills-link-active-bg:
+            nav-pills-link-active-bg = $component-active-bg
+
+
+
+            ###
+            ### Navbar
+            ###
+
+            # cat=bootstrap 4.0.0: styling/316/navbar-padding-y; type=string; label=$navbar-padding-y:
+            navbar-padding-y = ($spacer / 2)
+            # cat=bootstrap 4.0.0: styling/316/navbar-padding-x; type=string; label=$navbar-padding-x:
+            navbar-padding-x = $spacer
+
+            # cat=bootstrap 4.0.0: styling/316/navbar-nav-link-padding-x; type=string; label=$navbar-nav-link-padding-x:
+            navbar-nav-link-padding-x = .5rem
+
+            # cat=bootstrap 4.0.0: styling/316/navbar-brand-font-size; type=string; label=$navbar-brand-font-size:
+            navbar-brand-font-size = $font-size-lg
+            # cat=bootstrap 4.0.0: styling/316/nav-link-height; type=string; label=$nav-link-height:
+            nav-link-height = ($font-size-base * $line-height-base + $nav-link-padding-y * 2)
+            # cat=bootstrap 4.0.0: styling/316/navbar-brand-height; type=string; label=$navbar-brand-height:
+            navbar-brand-height = $navbar-brand-font-size * $line-height-base
+            # cat=bootstrap 4.0.0: styling/316/navbar-brand-padding-y; type=string; label=$navbar-brand-padding-y:
+            navbar-brand-padding-y = ($nav-link-height - $navbar-brand-height) / 2
+
+            # cat=bootstrap 4.0.0: styling/316/navbar-toggler-padding-y; type=string; label=$navbar-toggler-padding-y:
+            navbar-toggler-padding-y = .25rem
+            # cat=bootstrap 4.0.0: styling/316/navbar-toggler-padding-x; type=string; label=$navbar-toggler-padding-x:
+            navbar-toggler-padding-x = .75rem
+            # cat=bootstrap 4.0.0: styling/316/navbar-toggler-font-size; type=string; label=$navbar-toggler-font-size:
+            navbar-toggler-font-size = $font-size-lg
+            # cat=bootstrap 4.0.0: styling/316/navbar-toggler-border-radius; type=string; label=$navbar-toggler-border-radius:
+            navbar-toggler-border-radius = $btn-border-radius
+
+            # cat=bootstrap 4.0.0: styling/316/navbar-dark-color; type=string; label=$navbar-dark-color:
+            navbar-dark-color = rgba($white, .5)
+            # cat=bootstrap 4.0.0: styling/316/navbar-dark-hover-color; type=string; label=$navbar-dark-hover-color:
+            navbar-dark-hover-color = rgba($white, .75)
+            # cat=bootstrap 4.0.0: styling/316/navbar-dark-active-color; type=string; label=$navbar-dark-active-color:
+            navbar-dark-active-color = $white
+            # cat=bootstrap 4.0.0: styling/316/navbar-dark-disabled-color; type=string; label=$navbar-dark-disabled-color:
+            navbar-dark-disabled-color = rgba($white, .25)
+            # cat=bootstrap 4.0.0: styling/316/navbar-dark-toggler-icon-bg; type=string; label=$navbar-dark-toggler-icon-bg:
+            navbar-dark-toggler-icon-bg = str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23")
+            # cat=bootstrap 4.0.0: styling/316/navbar-dark-toggler-border-color; type=string; label=$navbar-dark-toggler-border-color:
+            navbar-dark-toggler-border-color = rgba($white, .1)
+
+            # cat=bootstrap 4.0.0: styling/316/navbar-light-color; type=string; label=$navbar-light-color:
+            navbar-light-color = rgba($black, .5)
+            # cat=bootstrap 4.0.0: styling/316/navbar-light-hover-color; type=string; label=$navbar-light-hover-color:
+            navbar-light-hover-color = rgba($black, .7)
+            # cat=bootstrap 4.0.0: styling/316/navbar-light-active-color; type=string; label=$navbar-light-active-color:
+            navbar-light-active-color = rgba($black, .9)
+            # cat=bootstrap 4.0.0: styling/316/navbar-light-disabled-color; type=string; label=$navbar-light-disabled-color:
+            navbar-light-disabled-color = rgba($black, .3)
+            # cat=bootstrap 4.0.0: styling/316/navbar-light-toggler-icon-bg; type=string; label=$navbar-light-toggler-icon-bg:
+            navbar-light-toggler-icon-bg = str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23")
+            # cat=bootstrap 4.0.0: styling/316/navbar-light-toggler-border-color; type=string; label=$navbar-light-toggler-border-color:
+            navbar-light-toggler-border-color = rgba($black, .1)
         }
     }
 }
