@@ -421,7 +421,7 @@ plugin.bootstrap_package {
             input-btn-focus-width = .2rem
             # cat=bootstrap 4.0.0: styling/310/input-btn-focus-color; type=string; label=$input-btn-focus-color:
             input-btn-focus-color = rgba($component-active-bg, .25)
-            # cat=bootstrap 4.0.0: styling/310/input-btn-focus-width; type=string; label=$input-btn-focus-width:
+            # cat=bootstrap 4.0.0: styling/310/input-btn-focus-box-shadow; type=string; label=$input-btn-focus-box-shadow:
             input-btn-focus-box-shadow = 0 0 0 $input-btn-focus-width $input-btn-focus-color
 
             # cat=bootstrap 4.0.0: styling/310/input-btn-padding-y-sm; type=string; label=$input-btn-padding-y-sm:
@@ -429,7 +429,7 @@ plugin.bootstrap_package {
             # cat=bootstrap 4.0.0: styling/310/input-btn-padding-x-sm; type=string; label=$input-btn-padding-x-sm:
             input-btn-padding-x-sm = .5rem
             # cat=bootstrap 4.0.0: styling/310/input-btn-line-height-sm; type=string; label=$input-btn-line-height-sm:
-            input-btn-padding-y-sm = $line-height-sm
+            input-btn-line-height-sm = $line-height-sm
 
             # cat=bootstrap 4.0.0: styling/310/input-btn-padding-y-lg; type=string; label=$input-btn-padding-y-lg:
             input-btn-padding-y-lg = .5rem
@@ -671,7 +671,7 @@ plugin.bootstrap_package {
             custom-select-line-height = $input-btn-line-height
             # cat=bootstrap 4.0.0: styling/312/custom-select-color; type=string; label=$custom-select-color:
             custom-select-color = $input-color
-            # cat=bootstrap 4.0.0: styling/312/custom-select-disabled-color; type=string; label=$custom-select-color:
+            # cat=bootstrap 4.0.0: styling/312/custom-select-disabled-color; type=string; label=$custom-select-disabled-color:
             custom-select-disabled-color = $gray-600
             # cat=bootstrap 4.0.0: styling/312/custom-select-bg; type=string; label=$custom-select-bg:
             custom-select-bg = $white
