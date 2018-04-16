@@ -34,6 +34,7 @@ return [
         'typeicon_classes' => [
             'default' => 'content-bootstrappackage-carousel-item',
             'header' => 'content-bootstrappackage-carousel-item-header',
+            'call_to_action' => 'content-bootstrappackage-carousel-item-calltoaction',
             'image' => 'content-bootstrappackage-carousel-item-image',
             'text_and_image' => 'content-bootstrappackage-carousel-item-textandimage',
             'background_image' => 'content-bootstrappackage-carousel-item-backgroundimage',
@@ -46,8 +47,10 @@ return [
             tt_content,
             header,
             header_layout,
+            header_class,
             subheader,
             subheader_layout,
+            subheader_class
             bodytext,
             image,
             text_color,
@@ -73,6 +76,23 @@ return [
                 --palette--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.header;header,
                 nav_title,
                 text_color,
+                link,
+                --div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tabs.background,
+                background_color,
+                background_image,
+                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
+                --palette--;;hiddenLanguagePalette,
+            '
+        ],
+        'call_to_action' => [
+            'showitem' => '
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
+                --palette--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.header;header,
+                nav_title,
+                bodytext,
+                button_text,
                 link,
                 --div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tabs.background,
                 background_color,
@@ -161,9 +181,11 @@ return [
             'showitem' => '
                 header,
                 header_layout,
+                header_class,
                 --linebreak--,
                 subheader,
                 subheader_layout,
+                subheader_class,
             '
         ],
         'general' => [
@@ -206,6 +228,11 @@ return [
                         'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.item_type.header',
                         'header',
                         'content-bootstrappackage-carousel-item-header'
+                    ],
+                    [
+                        'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.item_type.calltoaction',
+                        'call_to_action',
+                        'content-bootstrappackage-carousel-item-calltoaction'
                     ],
                     [
                         'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.item_type.image',
@@ -345,7 +372,7 @@ return [
             ],
         ],
         'header_layout' => [
-            'exclude' => 1,
+            'exclude' => true,
             'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.header_layout',
             'config' => [
                 'type' => 'select',
@@ -369,6 +396,22 @@ return [
                     ],
                 ],
                 'default' => '1'
+            ],
+        ],
+        'header_class' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.header_class',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['', 'none'],
+                    ['h1', 'h1'],
+                    ['h2', 'h2'],
+                    ['h3', 'h3'],
+                    ['h4', 'h4'],
+                    ['h5', 'h5']
+                ]
             ],
         ],
         'subheader' => [
@@ -403,6 +446,22 @@ return [
                 'default' => '2'
             ],
         ],
+        'subheader_class' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.subheader_class',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['', 'none'],
+                    ['h1', 'h1'],
+                    ['h2', 'h2'],
+                    ['h3', 'h3'],
+                    ['h4', 'h4'],
+                    ['h5', 'h5']
+                ]
+            ],
+        ],
         'nav_title' => [
             'exclude' => true,
             'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.nav_title',
@@ -419,9 +478,17 @@ return [
             'config' => [
                 'type' => 'text',
                 'cols' => '80',
-                'rows' => '15',
+                'rows' => '5',
                 'softref' => 'typolink_tag,images,email[subst],url',
             ],
+        ],
+        'button_text' => [
+            'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.button_text',
+            'config' => [
+                'type' => 'input',
+                'size' => 20,
+                'max' => 255
+            ]
         ],
         'image' => [
             'exclude' => true,

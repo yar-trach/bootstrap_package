@@ -15,8 +15,10 @@
 # customsubcategory=145=Content Element Uploads
 # customsubcategory=146=Content Element Gallery
 # customsubcategory=147=Content Element Menu Card
+# customsubcategory=148=Content Element Timeline
 # customsubcategory=150=Config
 # customsubcategory=160=Theme
+# customsubcategory=162=Breadcrumb
 # customsubcategory=165=Social Media
 # customsubcategory=167=Section Meta
 # customsubcategory=168=Section Language
@@ -81,10 +83,21 @@ page {
             # cat=bootstrap package: basic/160/103; type=int+; label=Navigation Icon Height
             height = 20
         }
-        # cat=bootstrap package: basic/160/110; type=boolean; label=Breadcrumb: Enable to display the breadcrumb
-        breadcrumb = 1
-        # cat=bootstrap package: basic/160/111; type=int+; label=Breadcrumb Enable Level: Enable breadcrumb menu is greater or equal this value
-        breadcrumbEnableLevel = 2
+
+        breadcrumb {
+            # cat=bootstrap package: basic/162/breadcrumb_enable; type=boolean; label=Breadcrumb: Enable to display the breadcrumb
+            enable = 1
+            # cat=bootstrap package: basic/162/breadcrumb_enableLevel; type=int+; label=Breadcrumb Enable Level: Enable breadcrumb menu is greater or equal this value
+            enableLevel = 2
+            icon {
+                # cat=bootstrap package: basic/162/breadcrumb_icon_enable; type=boolean; label=Breadcrumb Icon: Enable navigation icons in the breadcrumb
+                enable = 0
+                # cat=bootstrap package: basic/162/breadcrumb_icon_width; type=int+; label=Breadcrumb Icon Width
+                width = 16
+                # cat=bootstrap package: basic/162/breadcrumb_icon_height; type=int+; label=Breadcrumb Icon Height
+                height = 16
+            }
+        }
 
         meta {
             # cat=bootstrap package: basic/167/meta_enable; type=boolean; label=MetaSection: Enable to display the MetaSection at bottom
@@ -160,7 +173,7 @@ page {
             # cat=bootstrap package: basic/169/120; type=boolean; label=Copyright: Enable to display the copyright
             enable = 1
             # cat=bootstrap package: basic/169/121; type=string; label=Copyright Text
-            text = Built on a Windows 10 Surface Book. Running with <a href="http://www.typo3.org" target="_blank">TYPO3</a>.<br> Made with <span class="glyphicon glyphicon-heart"></span> by <a href="http://www.bk2k.info" target="_blank">Benjamin Kott</a>
+            text = Running with <a href="http://www.typo3.org" target="_blank">TYPO3</a> and <a href="https://www.bootstrap-package.com" target="_blank">Bootstrap Package</a>.
         }
     }
 
@@ -302,23 +315,25 @@ plugin.bootstrap_package_contentelements {
     gallery {
         columnClass {
             # cat=bootstrap package: advanced/146/100; type=string; label=Gallery Item CSS Class for 1 column
-            1 = col-xs-12
+            1 = gallery-item-size-1
             # cat=bootstrap package: advanced/146/101; type=string; label=Gallery Item CSS Class for 2 columns
-            2 = col-sm-6 col-xs-12
+            2 = gallery-item-size-2
             # cat=bootstrap package: advanced/146/102; type=string; label=Gallery Item CSS Class for 3 columns
-            3 = col-xs-4
+            3 = gallery-item-size-3
             # cat=bootstrap package: advanced/146/103; type=string; label=Gallery Item CSS Class for 4 Columns
-            4 = col-sm-3 col-xs-6
-            # cat=bootstrap package: advanced/146/104; type=string; label=Gallery Item CSS Class for 6 Columns
-            6 = col-md-2 col-sm-3 col-xs-4
+            4 = gallery-item-size-4
+            # cat=bootstrap package: advanced/146/104; type=string; label=Gallery Item CSS Class for 5 Columns
+            5 = gallery-item-size-5
+            # cat=bootstrap package: advanced/146/105; type=string; label=Gallery Item CSS Class for 6 Columns
+            6 = gallery-item-size-6
         }
     }
     menu_thumbnail {
         media {
             # cat=bootstrap package: advanced/143/102; type=string; label=Thumbnail Menu Media Height
-            height = 250c
+            height = 128m
             # cat=bootstrap package: advanced/143/103; type=string; label=Thumbnail Menu Media Width
-            width = 440c
+            width = 250m
         }
         title {
             # cat=bootstrap package: advanced/143/104; type=string; label=Thumbnail Menu Crop Title
@@ -347,6 +362,18 @@ plugin.bootstrap_package_contentelements {
         abstract {
             # cat=bootstrap package: advanced/147/107; type=string; label=Card Menu Crop Abstract
             crop = 250
+        }
+    }
+    timeline {
+        date {
+            # cat=bootstrap package: advanced/148/101; type=string; label=Timeline Date Format
+            format = %B %e, %Y
+        }
+        media {
+            # cat=bootstrap package: advanced/148/102; type=string; label=Timeline Media Height
+            height = 200c
+            # cat=bootstrap package: advanced/148/103; type=string; label=Timeline Media Width
+            width = 525c
         }
     }
     uploads {

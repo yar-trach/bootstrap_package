@@ -57,6 +57,7 @@ lib.contentElement {
                 2 = {$plugin.bootstrap_package_contentelements.gallery.columnClass.2}
                 3 = {$plugin.bootstrap_package_contentelements.gallery.columnClass.3}
                 4 = {$plugin.bootstrap_package_contentelements.gallery.columnClass.4}
+                5 = {$plugin.bootstrap_package_contentelements.gallery.columnClass.5}
                 6 = {$plugin.bootstrap_package_contentelements.gallery.columnClass.6}
             }
         }
@@ -85,6 +86,15 @@ lib.contentElement {
             }
             abstract {
                 crop = {$plugin.bootstrap_package_contentelements.menu_card.abstract.crop}
+            }
+        }
+        timeline {
+            date {
+                format = {$plugin.bootstrap_package_contentelements.timeline.date.format}
+            }
+            media {
+                height = {$plugin.bootstrap_package_contentelements.timeline.media.height}
+                width = {$plugin.bootstrap_package_contentelements.timeline.media.width}
             }
         }
         uploads {

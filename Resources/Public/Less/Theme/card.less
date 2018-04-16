@@ -1,19 +1,19 @@
 //
 // Base styles
 //
-@card-spacer-y:                     .75rem;
-@card-spacer-x:                     1.5rem;
+@card-spacer-y:                     .75em;
+@card-spacer-x:                     1.5em;
 @card-border-width:                 1px;
 @card-border-radius:                @border-radius-base;
 @card-border-color:                 rgba(0, 0, 0, .125);
 @card-inner-border-radius:          max(0, @card-border-radius - @card-border-width);
 @card-cap-bg:                       rgba(0, 0, 0, .03);
 @card-bg:                           #ffffff;
-@card-img-overlay-padding:          1.25rem;
+@card-img-overlay-padding:          1.25em;
 @card-group-margin:                 (@grid-gutter-width / 2);
 @card-deck-margin:                  @card-group-margin;
 @card-columns-count:                3;
-@card-columns-gap:                  1.25rem;
+@card-columns-gap:                  1.25em;
 @card-columns-margin:               @card-spacer-y;
 
 
@@ -148,7 +148,7 @@
         margin-left: -@card-deck-margin;
         .card {
             display: flex;
-            // Flexbugs #4: https://github.com/philipwalton/flexbugs#4-flex-shorthand-declarations-with-unitless-flex-basis-values-are-ignored
+            // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
             flex: 1 0 0%;
             flex-direction: column;
             margin-right: @card-deck-margin;
@@ -176,7 +176,7 @@
         // The child selector allows nested `.card` within `.card-group`
         // to display properly.
         > .card {
-            // Flexbugs #4: https://github.com/philipwalton/flexbugs#4-flex-shorthand-declarations-with-unitless-flex-basis-values-are-ignored
+            // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
             flex: 1 0 0%;
             margin-bottom: 0;
             + .card {
@@ -198,6 +198,8 @@
     @media (min-width: @screen-sm) {
         column-count: @card-columns-count;
         column-gap: @card-columns-gap;
+        orphans: 1;
+        widows: 1;
         .card {
             display: inline-block; // Don't let them vertically span multiple columns
             width: 100%; // Don't let their width change
@@ -229,4 +231,50 @@
     .card-link {
         color: @link-color;
     }
+}
+
+
+//
+// Card Panel
+//
+.card-panel {
+    .card-header {
+        font-size: 1.125em !important;
+    }
+    .card-body {
+        > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+//
+// Variants
+//
+.card-panel-variant(@border; @heading-text-color; @heading-bg-color; @heading-border) {
+    border-color: @border;
+    & > .card-header {
+        color: @heading-text-color;
+        background-color: @heading-bg-color;
+        border-color: @heading-border;
+    }
+}
+.card-panel-default {
+    .card-panel-variant(@panel-default-border; @panel-default-text; @panel-default-heading-bg; @panel-default-border);
+}
+.card-panel-primary {
+    .card-panel-variant(@panel-primary-border; @panel-primary-text; @panel-primary-heading-bg; @panel-primary-border);
+}
+.card-panel-success {
+    .card-panel-variant(@panel-success-border; @panel-success-text; @panel-success-heading-bg; @panel-success-border);
+}
+.card-panel-info {
+    .card-panel-variant(@panel-info-border; @panel-info-text; @panel-info-heading-bg; @panel-info-border);
+}
+.card-panel-warning {
+    .card-panel-variant(@panel-warning-border; @panel-warning-text; @panel-warning-heading-bg; @panel-warning-border);
+}
+.card-panel-danger {
+    .card-panel-variant(@panel-danger-border; @panel-danger-text; @panel-danger-heading-bg; @panel-danger-border);
 }

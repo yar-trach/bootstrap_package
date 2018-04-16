@@ -16,8 +16,8 @@
             <trans-unit id="backend_layout.default">
                 <source>Default</source>
             </trans-unit>
-            <trans-unit id="backend_layout.clean">
-                <source>Clean</source>
+            <trans-unit id="backend_layout.simple">
+                <source>Simple</source>
             </trans-unit>
             <trans-unit id="backend_layout.2_columns">
                 <source>2 Columns</source>
@@ -160,6 +160,9 @@
             <trans-unit id="content_group.text">
                 <source>Text</source>
             </trans-unit>
+            <trans-unit id="content_group.social_media">
+                <source>Social Media</source>
+            </trans-unit>
 
             <trans-unit id="content_element.media">
                 <source>Media</source>
@@ -280,6 +283,20 @@
                 <source>Quote Source</source>
             </trans-unit>
 
+            <trans-unit id="content_element.social_links">
+                <source>Social Links</source>
+            </trans-unit>
+            <trans-unit id="content_element.social_links.description">
+                <source>Insert a element to display configured social media channels</source>
+            </trans-unit>
+
+            <trans-unit id="content_element.timeline">
+                <source>Timeline</source>
+            </trans-unit>
+            <trans-unit id="content_element.timeline.description">
+                <source>Insert a element to display a timeline</source>
+            </trans-unit>
+
             <trans-unit id="carousel.options">
                 <source>Carousel Options</source>
             </trans-unit>
@@ -326,14 +343,23 @@
             <trans-unit id="carousel_item.header_layout">
                 <source>Header Layout</source>
             </trans-unit>
+            <trans-unit id="carousel_item.header_class">
+                <source>Header Class</source>
+            </trans-unit>
             <trans-unit id="carousel_item.subheader">
                 <source>Subheader</source>
             </trans-unit>
             <trans-unit id="carousel_item.subheader_layout">
                 <source>Subheader Layout</source>
             </trans-unit>
+            <trans-unit id="carousel_item.subheader_class">
+                <source>Subheader Class</source>
+            </trans-unit>
             <trans-unit id="carousel_item.nav_title">
                 <source>Navigation Title</source>
+            </trans-unit>
+            <trans-unit id="carousel_item.button_text">
+                <source>Button Text</source>
             </trans-unit>
             <trans-unit id="carousel_item.bodytext">
                 <source>Text</source>
@@ -353,6 +379,9 @@
 
             <trans-unit id="carousel_item.item_type.header">
                 <source>Header</source>
+            </trans-unit>
+            <trans-unit id="carousel_item.item_type.calltoaction">
+                <source>Call to Action</source>
             </trans-unit>
             <trans-unit id="carousel_item.item_type.image">
                 <source>Image</source>
@@ -374,7 +403,7 @@
                 <source>Default Element</source>
             </trans-unit>
 
-            <trans-unit id="_item">
+            <trans-unit id="accordion_item">
                 <source>Accordion Item</source>
             </trans-unit>
             <trans-unit id="accordion_item.tt_content">
@@ -440,10 +469,45 @@
                 <source>Right</source>
             </trans-unit>
 
+            <trans-unit id="timeline.options">
+                <source>Timeline Options</source>
+            </trans-unit>
+            <trans-unit id="timeline.sorting">
+                <source>Sorting</source>
+            </trans-unit>
+            <trans-unit id="timeline.sorting.asc">
+                <source>Ascending</source>
+            </trans-unit>
+            <trans-unit id="timeline.sorting.desc">
+                <source>Descending</source>
+            </trans-unit>
+
+            <trans-unit id="timeline_item">
+                <source>Timeline Item</source>
+            </trans-unit>
+            <trans-unit id="timeline_item.tt_content">
+                <source>Timeline</source>
+            </trans-unit>
+            <trans-unit id="timeline_item.date">
+                <source>Date</source>
+            </trans-unit>
+            <trans-unit id="timeline_item.header">
+                <source>Header</source>
+            </trans-unit>
+            <trans-unit id="timeline_item.bodytext">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="timeline_item.icon_file">
+                <source>Icon File</source>
+            </trans-unit>
+            <trans-unit id="timeline_item.image">
+                <source>Image</source>
+            </trans-unit>
+
             <trans-unit id="icon_group_item">
                 <source>Icon Group Item</source>
             </trans-unit>
-            <trans-unit id="tab_item.tt_content">
+            <trans-unit id="icon_group_item.tt_content">
                 <source>Icon Group</source>
             </trans-unit>
             <trans-unit id="icon_group_item.header">
@@ -587,13 +651,6 @@
             </trans-unit>
             <trans-unit id="uploadslayout.iconsandpreview">
                 <source>Display Icons and Preview Images</source>
-            </trans-unit>
-
-            <trans-unit id="field.frame_class.well">
-                <source>Well</source>
-            </trans-unit>
-            <trans-unit id="field.frame_class.jumbotron">
-                <source>Jumbotron</source>
             </trans-unit>
 
             <trans-unit id="field.assets">

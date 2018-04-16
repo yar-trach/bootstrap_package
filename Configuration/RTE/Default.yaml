@@ -5,6 +5,8 @@ imports:
 
 editor:
     externalPlugins:
+        bootstrappackage_address:
+            resource: "EXT:bootstrap_package/Resources/Public/CKEditor/Plugins/Address/plugin.min.js"
         bootstrappackage_box:
             resource: "EXT:bootstrap_package/Resources/Public/CKEditor/Plugins/Box/plugin.min.js"
         bootstrappackage_table:
@@ -65,6 +67,7 @@ editor:
 
         extraPlugins:
             - justify
+            - bootstrappackage_address
             - bootstrappackage_box
             - bootstrappackage_table
 
@@ -75,3 +78,26 @@ editor:
             - Anchor
             - Underline
             - Strike
+
+classesAnchor:
+    page:
+        class: 'link-page'
+        type: 'page'
+    folder:
+        class: 'link-folder'
+        type: 'folder'
+    file:
+        class: 'link-file'
+        type: 'file'
+    external:
+        class: 'link-external'
+        type: 'url'
+    mail:
+        class: 'link-mail'
+        type: 'mail'
+
+buttons:
+    link:
+        properties:
+            class:
+                allowedClasses: 'link-arrow, link-page, link-folder, link-file, link-external, link-mail'

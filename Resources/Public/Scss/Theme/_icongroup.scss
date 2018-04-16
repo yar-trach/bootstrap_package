@@ -6,7 +6,7 @@
 // Variables
 //
 $icongroup-margin: ($grid-gutter-width / 2);
-$icongroup-icon-size: 60px;
+$icongroup-icon-size: 40px;
 
 //
 // Component
@@ -16,44 +16,40 @@ $icongroup-icon-size: 60px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: -$icongroup-margin!important;
-    margin-bottom: -$icongroup-margin!important;
-    @include media-breakpoint-up(sm) {
-        margin-right: -$icongroup-margin;
-        margin-left: -$icongroup-margin;
-    }
+    margin: -$icongroup-margin!important;
 }
 .icongroup-item {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    margin-top: $icongroup-margin;
-    margin-bottom: $icongroup-margin;
-    width: 100%;
+    margin: $icongroup-margin;
+    width: calc(100% - #{$icongroup-margin} * 2);
     @include media-breakpoint-up(sm) {
-        margin-right: $icongroup-margin;
-        margin-left: $icongroup-margin;
-        width: calc('50% - #{$icongroup-margin} * 2');
+        width: calc(50% - #{$icongroup-margin} * 2);
     }
     @include media-breakpoint-up(md) {
-        width: calc('25% - #{$icongroup-margin} * 2');
+        width: calc(25% - #{$icongroup-margin} * 2);
     }
 }
 .icongroup-item-icon-container {
-    width: 20%;
-    max-width: $icongroup-icon-size;
+    flex-shrink: 0;
+    width: $icongroup-icon-size;
     margin-right: $icongroup-margin;
     svg {
         display: block;
+        width: 100%;
+        height: auto;
     }
 }
 .icongroup-item-text-container {
     flex-grow: 1;
 }
 .icongroup-item-text-header {
+    font-size: 1.25em;
     margin-bottom: 0.15em;
 }
 .icongroup-item-text-subheader {
+    font-size: 1em;
     margin-bottom: 0;
 }

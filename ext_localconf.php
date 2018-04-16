@@ -65,6 +65,26 @@ if (!$bootstrapPackageConfiguration['disablePageTsTCEFORM']) {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/PageTS/TCEFORM.txt">');
 }
 
+/***************
+ * Register custom EXT:form configuration
+ */
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(trim('
+    module.tx_form {
+        settings {
+            yamlConfigurations {
+                110 = EXT:bootstrap_package/Configuration/Form/Setup.yaml
+            }
+        }
+    }
+    plugin.tx_form {
+        settings {
+            yamlConfigurations {
+                110 = EXT:bootstrap_package/Configuration/Form/Setup.yaml
+            }
+        }
+    }
+'));
+
 if (TYPO3_MODE === 'BE') {
     $signalSlotDispatcher = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\SignalSlot\Dispatcher::class);
 
@@ -159,6 +179,8 @@ $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\BK2K\Bootstr
     = \BK2K\BootstrapPackage\Updates\CarouselItemTypeUpdate::class;
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\BK2K\BootstrapPackage\Updates\BackendLayoutUpdate::class]
     = \BK2K\BootstrapPackage\Updates\BackendLayoutUpdate::class;
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\BK2K\BootstrapPackage\Updates\FrameClassToBackgroundUpdate::class]
+    = \BK2K\BootstrapPackage\Updates\FrameClassToBackgroundUpdate::class;
 
 /***************
  * Register "bk2k" as global fluid namespace
@@ -169,6 +191,16 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['bk2k'][] = 'BK2K\\Boo
  * Register Icons
  */
 $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+$iconRegistry->registerIcon(
+    'content-bootstrappackage-timeline',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source' => 'EXT:bootstrap_package/Resources/Public/Icons/ContentElements/timeline.svg']
+);
+$iconRegistry->registerIcon(
+    'content-bootstrappackage-timeline-item',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source' => 'EXT:bootstrap_package/Resources/Public/Icons/ContentElements/timeline-item.svg']
+);
 $iconRegistry->registerIcon(
     'content-bootstrappackage-tab',
     \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
@@ -208,6 +240,11 @@ $iconRegistry->registerIcon(
     'content-bootstrappackage-carousel-item-header',
     \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
     ['source' => 'EXT:bootstrap_package/Resources/Public/Icons/ContentElements/carousel-item-header.svg']
+);
+$iconRegistry->registerIcon(
+    'content-bootstrappackage-carousel-item-calltoaction',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source' => 'EXT:bootstrap_package/Resources/Public/Icons/ContentElements/carousel-item-calltoaction.svg']
 );
 $iconRegistry->registerIcon(
     'content-bootstrappackage-carousel-item-image',
@@ -253,6 +290,11 @@ $iconRegistry->registerIcon(
     'content-menu-card',
     \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
     ['source' => 'EXT:bootstrap_package/Resources/Public/Icons/ContentElements/menu-card.svg']
+);
+$iconRegistry->registerIcon(
+    'content-bootstrappackage-social-links',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source' => 'EXT:bootstrap_package/Resources/Public/Icons/ContentElements/social-links.svg']
 );
 $iconRegistry->registerIcon(
     'systeminformation-bootstrappackage',

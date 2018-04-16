@@ -13,7 +13,6 @@
 #### Manual inclusion to keep control over loading order ####
 #############################################################
 
-#### TYPO3 DEFAULT CONTENT ELEMENT RENDERING
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/Audio.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/Bullets.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/Div.typoscript">
@@ -35,6 +34,7 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/MenuSitemapPages.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/Quote.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/Shortcut.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/SocialLinks.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/Table.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/Text.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/Textcolumn.typoscript">
@@ -42,13 +42,6 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/Textpic.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/Textmedia.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/Uploads.typoscript">
-
-#### EXTENSIONS
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/Extension/Form.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/Extension/FrontendLogin.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/Extension/IndexedSearch.typoscript">
-
-#### BOOTSTRAP PACKAGE CONTENT ELEMENT RENDERING
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/Accordion.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/Carousel.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/CarouselSmall.typoscript">
@@ -59,10 +52,19 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/Panel.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/Tab.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/Texticon.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/Timeline.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/MenuCardDir.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/MenuCardList.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/MenuThumbnailDir.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/MenuThumbnailList.typoscript">
+
+#############################################################
+#### EXTENSIONS                                          ####
+#### Manual inclusion to keep control over loading order ####
+#############################################################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/Extension/Form.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/Extension/FrontendLogin.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/Extension/IndexedSearch.typoscript">
 
 
 ###################
@@ -204,7 +206,7 @@ page {
                 includeNotInMenu = 1
                 as = breadcrumb
                 if {
-                    value = {$page.theme.breadcrumbEnableLevel}
+                    value = {$page.theme.breadcrumb.enableLevel}
                     value {
                         insertData = 1
                         prioriCalc = 1
@@ -212,6 +214,13 @@ page {
                     }
                     isGreaterThan {
                         data = level
+                    }
+                }
+                dataProcessing {
+                    10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                    10 {
+                        references.fieldName = nav_icon
+                        as = icon
                     }
                 }
             }
@@ -246,9 +255,6 @@ page {
                 height = {$page.logo.height}
                 width = {$page.logo.width}
                 linktitle = {$page.logo.linktitle}
-            }
-            breadcrumb {
-                enable = {$page.theme.breadcrumb}
             }
             navigation {
                 style = {$page.theme.navigationstyle}
@@ -417,11 +423,11 @@ page {
                 enabled = 1
             }
         }
-        socialmediaicons = EXT:bootstrap_package/Resources/Public/Fonts/socialmedia.min.css
-        socialmediaicons {
+        bootstrappackageicon = EXT:bootstrap_package/Resources/Public/Fonts/bootstrappackageicon.min.css
+        bootstrappackageicon {
             fontLoader {
                 families {
-                    0 = BootstrapPackageSocialMedia
+                    0 = BootstrapPackageIcon
                 }
                 enabled = 1
             }
@@ -444,6 +450,7 @@ page {
 
         #### Custom Modules
         responsiveimages = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/jquery.responsiveimages.min.js
+        bootstrap_form = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.form.min.js
         bootstrap_swipe = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.swipe.min.js
         bootstrap_popover = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.popover.min.js
         bootstrap_stickyheader = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.stickyheader.min.js
