@@ -250,6 +250,10 @@ plugin.bootstrap_package {
             ###
             ### Fonts
             ###
+            # cat=bootstrap 4.0.0: styling/308/google.webfont; type=string; label=Google Webfont
+            google-webfont = Roboto
+            # cat=bootstrap 4.0.0: styling/308/google.webfont-weight; type=string; label=Google Webfont Weights: Comma separated list of font weights
+            google-webfont-weight = 300,400,700
 
             # cat=bootstrap 4.0.0: styling/308/font-family-sans-serif; type=string; label=$font-family-sans-serif:
             font-family-sans-serif = -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
