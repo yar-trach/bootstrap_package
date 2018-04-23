@@ -119,19 +119,19 @@ plugin.bootstrap_package {
             ### OPTIONS
             ###
 
-            # cat=bootstrap 4.0.0: styling/301/enable-caret; type=boolean; label=$enable-caret:
+            # cat=bootstrap 4.0.0: styling/301/enable-caret; type=options[true, false]; label=$enable-caret:
             enable-caret = true
-            # cat=bootstrap 4.0.0: styling/301/enable-rounded; type=boolean; label=$enable-rounded:
-            enable-rounded = true
-            # cat=bootstrap 4.0.0: styling/301/enable-shadows; type=boolean; label=$enable-shadows:
+            # cat=bootstrap 4.0.0: styling/301/enable-rounded; type=options[true, false]; label=$enable-rounded:
+            enable-rounded = false
+            # cat=bootstrap 4.0.0: styling/301/enable-shadows; type=options[true, false]; label=$enable-shadows:
             enable-shadows = false
-            # cat=bootstrap 4.0.0: styling/301/enable-gradients; type=boolean; label=$enable-gradients:
+            # cat=bootstrap 4.0.0: styling/301/enable-gradients; type=options[true, false]; label=$enable-gradients:
             enable-gradients = false
-            # cat=bootstrap 4.0.0: styling/301/enable-transitions; type=boolean; label=$enable-transitions:
+            # cat=bootstrap 4.0.0: styling/301/enable-transitions; type=options[true, false]; label=$enable-transitions:
             enable-transitions = true
-            # cat=bootstrap 4.0.0: styling/301/enable-grid-classes; type=boolean; label=$enable-grid-classes:
+            # cat=bootstrap 4.0.0: styling/301/enable-grid-classes; type=options[true, false]; label=$enable-grid-classes:
             enable-grid-classes = true
-            # cat=bootstrap 4.0.0: styling/301/enable-print-styles; type=boolean; label=$enable-print-styles:
+            # cat=bootstrap 4.0.0: styling/301/enable-print-styles; type=options[true, false]; label=$enable-print-styles:
             enable-print-styles = true
 
 
