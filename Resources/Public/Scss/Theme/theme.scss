@@ -6,7 +6,7 @@
 //
 // Import needed Bootstrap Files
 //
-@import "variables";
+// @import "variables";
 @import "../../Contrib/bootstrap4/scss/bootstrap";
 
 //
@@ -45,3 +45,9 @@
 // Plugins
 //
 @import "photoswipe";
+
+
+// 
+// Mask Modules
+// 
+@import "../MaskModules/duoteaser";

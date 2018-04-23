@@ -1,0 +1,45 @@
+.duo-teaser {
+    .card {
+        .card-img-overlay {
+            top: auto;
+            overflow: hidden;
+
+            @include media-breakpoint-down(sm) {
+                position: relative;
+                background-color: #fefeff;
+            }
+
+            @include media-breakpoint-up(sm) {
+                background-color: rgba(#fefeff, .64);
+                .card-title {
+                    padding-bottom: 0;
+                    will-change: padding;
+                    transition: padding .2s ease;
+                }
+                .btn {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    opacity: 0;
+                    transform: translate3d(-50%, 100%, 0);
+                    will-change: opacity, transform;
+                    transition: opacity .2s ease, transform .4s ease;
+                }
+            }
+        }
+
+        &:hover {
+            .card-img-overlay {
+                @include media-breakpoint-up(sm) {
+                    .card-title {
+                        padding-bottom: 2rem;
+                    }
+                    .btn {
+                        opacity: 1;
+                        transform: translate3d(-50%, -50%, 0);
+                    }
+                }
+            }
+        }
+    }
+}
