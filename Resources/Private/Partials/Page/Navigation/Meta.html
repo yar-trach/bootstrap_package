@@ -1,13 +1,18 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
 <f:if condition="{metanavigation}">
-    <ul id="meta_menu" class="meta-menu">
+    <f:if condition="{settings.logo.position} === 'meta'">
+        <f:render partial="Navigation/Logo" arguments="{_all}"></f:render>
+    </f:if>    
+
+    <nav id="meta_menu" class="nav ml-auto">
         <f:for each="{metanavigation}" as="item" iteration="metaiteration">
-            <li{f:if(condition: item.active, then:' class="active"')}>
-                <a href="{item.link}"{f:if(condition: item.target, then: ' target="{item.target}"')} title="{item.title}">
+            <li class="nav-item{f:if(condition: item.active, then:' active')}">
+                <a class="nav-link" href="{item.link}"{f:if(condition: item.target, then: ' target="{item.target}"')} title="{item.title}">
                     <span>{item.title}</span>
                 </a>
             </li>
         </f:for>
-    </ul>
+    </nav>
 </f:if>
 </html>

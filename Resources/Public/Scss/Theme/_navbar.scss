@@ -122,8 +122,8 @@
     }
     .navbar-brand-image {
         position: relative;
-        padding-top: 15px;
-        padding-bottom: 15px;
+        // padding-top: 15px;
+        // padding-bottom: 15px;
         img {
             position: relative;
             top: 50%;
@@ -199,7 +199,7 @@
 }
 @media (min-width: $grid-float-breakpoint) {
     .navbar-mainnavigation {
-        flex-flow: row nowrap;
+        // flex-flow: row nowrap;
         justify-content: flex-start;
         > .navbar-nav,
         > .container > .collapse > .navbar-nav,

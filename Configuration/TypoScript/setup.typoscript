@@ -255,6 +255,7 @@ page {
                 height = {$page.logo.height}
                 width = {$page.logo.width}
                 linktitle = {$page.logo.linktitle}
+                position = {$page.logo.logoposition}
             }
             navigation {
                 style = {$page.theme.navigationstyle}

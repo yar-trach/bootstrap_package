@@ -44,6 +44,8 @@ page {
         alt =
         # cat=bootstrap package: basic/110/150; type=string; label=Link title: Title of the link attribute of the logo image
         linktitle =
+        # cat=bootstrap package: basic/110/160; type=options[Meta=meta, Main=main]; label=Logo position
+        logoposition = main
     }
 
     preloader {

@@ -1,18 +1,17 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers" data-namespace-typo3-fluid="true">
 
 <header class="navbar navbar-mainnavigation navbar-{settings.navigation.style}{f:if(condition:settings.logo.file,then:' navbar-has-image')}{f:if(condition:settings.navigation.type, else:' navbar-top', then:' navbar-{settings.navigation.type} navbar-fixed-{settings.navigation.type}')}">
+    
     <div class="container">
-        <f:if condition="{settings.logo.file}">
-            <f:then>
-                <f:link.page pageUid="{rootPage}" class="navbar-brand navbar-brand-image" title="{settings.logo.linktitle}">
-                    <img class="navbar-brand-logo-normal" src="{f:uri.image(src: settings.logo.file)}" alt="{logoAlt}" height="{settings.logo.height}" width="{settings.logo.width}">
-                    <img class="navbar-brand-logo-inverted" src="{f:uri.image(src: settings.logo.fileInverted)}" alt="{logoAlt}" height="{settings.logo.height}" width="{settings.logo.width}">
-                </f:link.page>
-            </f:then>
-            <f:else>
-                <f:link.page pageUid="{rootPage}" class="navbar-brand navbar-brand-text" title="{settings.logo.linktitle}">{siteTitle}</f:link.page>
-            </f:else>
-        </f:if>
+            <f:if condition="{metanavigation}">
+                    <f:render partial="Navigation/Meta" arguments="{_all}"></f:render>
+                </f:if>
+    </div>
+
+    <div class="container">
+
+        
+
         <f:if condition="{mainnavigation}">
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainnavigation" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -29,6 +28,10 @@
 
 <f:section name="MainNavigation">
     <f:if condition="{menu}">
+        <f:if condition="{settings.logo.position} === 'main'">
+            <f:render partial="Navigation/Logo" arguments="{_all}"></f:render>
+        </f:if>  
+
         <ul class="navbar-nav">
             <f:for each="{menu}" as="item">
                 <f:if condition="{item.spacer}">
