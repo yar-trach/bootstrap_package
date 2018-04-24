@@ -1,6 +1,6 @@
 <div class="valign">
     <div class="vcontainer">
-        <div class="carousel-box">
+        <div class="carousel-box ml-auto">
             <f:if condition="{item.data.nav_title}">
                 <div>{item.data.nav_title}</div>
             </f:if>
@@ -14,7 +14,7 @@
                 </div>
             </f:if>
             <f:if condition="{item.data.link}">
-                <f:link.page pageUid="{item.data.link}" class="carousel-item-button btn btn-primary" additionalAttributes="{draggable:'false'}">
+                <f:link.page pageUid="{item.data.link}" class="carousel-item-button btn btn-danger btn-lg" additionalAttributes="{draggable:'false'}">
                     <f:if condition="{item.data.button_text}">
                         <f:then>
                             <span>{item.data.button_text}</span>

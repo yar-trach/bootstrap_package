@@ -244,10 +244,11 @@
 //
 .carousel-item-type-call_to_action {
     .carousel-box {
-        background-color: $body-bg;
+        // background-color: $body-bg;
+        color: var(--primary);
         padding: 2rem;
         @include media-breakpoint-up(sm) {
-            max-width: 50%;
+            max-width: 40%;
         }
     }
 }
