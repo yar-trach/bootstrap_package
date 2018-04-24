@@ -58,6 +58,29 @@
                 }
             }
         }
+
+        .transform-skew {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            z-index: -1;
+            overflow: hidden;
+            transform-origin: 0%;
+            transform: skewY(-5deg);
+        }
+
+        .item-background {
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            transform-origin: 0%;
+            transform: skewY(5deg);
+        }
     }
 }
 
@@ -66,6 +89,13 @@
 //
 .carousel {
     overflow: hidden;
+
+    .carousel-control-wrap {
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, 0, 0);
+    }
+    
     .carousel-control {
         width: 50px;
         @include media-breakpoint-up(sm) {

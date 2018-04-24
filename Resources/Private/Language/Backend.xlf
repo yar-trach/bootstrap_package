@@ -327,6 +327,12 @@
             <trans-unit id="carousel.show_nav_title.description">
                 <source>Show the navigation title of the records instead of the bubbles.</source>
             </trans-unit>
+            <trans-unit id="carousel.skew_background">
+                <source>Skew background</source>
+            </trans-unit>
+            <trans-unit id="carousel.skew_background.description">
+                <source>Make transform (skew) of background image</source>
+            </trans-unit>
 
             <trans-unit id="carousel_item">
                 <source>Carousel Item</source>

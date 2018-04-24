@@ -18,7 +18,16 @@
                     <div 
                         class="item{f:if(condition: iteration.isFirst,then:' active')} carousel-item carousel-item-type carousel-item-type-{item.data.item_type}" 
                         data-itemno="{iteration.index}" 
-                        style="{itemStyleImage} {itemStyleColor}">
+                        style="{f:if(condition: data.pi_flexform.skew_background,then:'',else:'{itemStyleImage} {itemStyleColor}')}">
+
+                        <!-- data.pi_flexform.show_nav_title -->
+                        <f:if condition="{data.pi_flexform.skew_background}">
+                            <div class="transform-skew">
+                                <div class="item-background" style="{itemStyleImage} {itemStyleColor}"></div>
+                            </div>
+                        </f:if>
+
+                        
 
                         <f:render partial="Carousel/Item/{item.data.item_type -> bk2k:format.upperCamelCase()}" arguments="{_all}" />
                     </div>
