@@ -2,27 +2,28 @@
 
 <header class="navbar navbar-mainnavigation navbar-{settings.navigation.style}{f:if(condition:settings.logo.file,then:' navbar-has-image')}{f:if(condition:settings.navigation.type, else:' navbar-top', then:' navbar-{settings.navigation.type} navbar-fixed-{settings.navigation.type}')}">
     
-    <div class="container">
+    <div class="header-meta w-100">
+        <div class="container">
             <f:if condition="{metanavigation}">
-                    <f:render partial="Navigation/Meta" arguments="{_all}"></f:render>
-                </f:if>
+                <f:render partial="Navigation/Meta" arguments="{_all}"></f:render>
+            </f:if>
+        </div>
     </div>
 
-    <div class="container">
-
-        
-
-        <f:if condition="{mainnavigation}">
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainnavigation" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <nav id="mainnavigation" class="collapse navbar-collapse">
-                <f:render partial="DropIn/Navigation/MainBefore" arguments="{_all}" />
-                <f:render section="MainNavigation" arguments="{menu: mainnavigation, settings: settings}" />
-                <f:render partial="DropIn/Navigation/MainAfter" arguments="{_all}" />
-            </nav>
-        </f:if>
-    </nav>
+    <div class="header-main w-100">
+        <div class="container">
+            <f:if condition="{mainnavigation}">
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainnavigation" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav id="mainnavigation" class="collapse navbar-collapse">
+                    <f:render partial="DropIn/Navigation/MainBefore" arguments="{_all}" />
+                    <f:render section="MainNavigation" arguments="{menu: mainnavigation, settings: settings}" />
+                    <f:render partial="DropIn/Navigation/MainAfter" arguments="{_all}" />
+                </nav>
+            </f:if>
+        </div>
+    </div>
 
 </header>
 

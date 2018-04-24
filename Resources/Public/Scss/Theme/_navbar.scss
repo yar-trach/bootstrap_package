@@ -200,13 +200,14 @@
 @media (min-width: $grid-float-breakpoint) {
     .navbar-mainnavigation {
         // flex-flow: row nowrap;
-        justify-content: flex-start;
+        // justify-content: flex-start;
         > .navbar-nav,
-        > .container > .collapse > .navbar-nav,
-        > .container-fluid > .collapse > .navbar-nav {
+        > .header-meta > .container > .collapse > .navbar-nav,
+        > .header-main > .container > .collapse > .navbar-nav {
             padding-top: 0!important;
             padding-bottom: 0!important;
             flex-direction: row;
+
             &:first-child {
                 margin-left: -$navbar-nav-link-padding-x;
             }
@@ -219,6 +220,8 @@
                 padding-left: $navbar-nav-link-padding-x;
             }
         }
+
+        > div,
         > .container,
         > .container-fluid {
             flex-wrap: nowrap;
